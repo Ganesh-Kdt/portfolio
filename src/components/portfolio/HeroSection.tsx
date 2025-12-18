@@ -76,6 +76,8 @@ const HeroSection = () => {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden noise-bg"
     >
+      {/* Grid pattern background */}
+      <div className="absolute inset-0 grid-pattern opacity-50" />
       {/* Loading overlay */}
       <AnimatePresence>
         {isLoading && (
@@ -237,27 +239,35 @@ const HeroSection = () => {
             animate="visible"
             className="max-w-4xl mx-auto text-center"
           >
-            {/* Greeting with typewriter effect */}
-            <motion.div variants={itemVariants} className="mb-4 overflow-hidden">
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-cyan font-mono text-lg"
-              >
-                <motion.span
-                  initial={{ width: 0 }}
-                  animate={{ width: "auto" }}
-                  transition={{ duration: 1, ease: "easeOut" }}
-                  className="inline-block overflow-hidden whitespace-nowrap"
-                >
-                  &lt;Hello World /&gt;
-                </motion.span>
-                <motion.span
-                  animate={{ opacity: [1, 0] }}
-                  transition={{ duration: 0.5, repeat: Infinity }}
-                  className="inline-block ml-1 w-2 h-5 bg-cyan"
-                />
-              </motion.p>
+            {/* Terminal-style greeting */}
+            <motion.div variants={itemVariants} className="mb-6">
+              <div className="terminal-window max-w-md mx-auto terminal-corners">
+                <div className="terminal-header">
+                  <span className="terminal-dot bg-destructive/80"></span>
+                  <span className="terminal-dot bg-primary/80"></span>
+                  <span className="terminal-dot bg-accent/80"></span>
+                  <span className="ml-2 text-xs text-muted-foreground font-mono">~/portfolio</span>
+                </div>
+                <div className="terminal-body">
+                  <div className="code-line">
+                    <span className="line-number">1</span>
+                    <div>
+                      <span className="code-keyword">const</span>{" "}
+                      <span className="code-function">greeting</span> ={" "}
+                      <span className="code-string">"Hello World"</span>;
+                    </div>
+                  </div>
+                  <div className="code-line mt-1">
+                    <span className="line-number">2</span>
+                    <div>
+                      <span className="code-keyword">export</span>{" "}
+                      <span className="code-keyword">default</span>{" "}
+                      <span className="code-function">Developer</span>();
+                      <span className="inline-block w-2 h-4 bg-cyan ml-1 cursor-blink"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
 
             {/* Profile photo with dramatic entrance */}
@@ -296,16 +306,17 @@ const HeroSection = () => {
               </span>
             </motion.h1>
 
-            {/* Title with slide-up reveal */}
+            {/* Title with code comment style */}
             <motion.div 
               variants={itemVariants} 
               className="mb-6 overflow-hidden"
             >
+              <span className="text-muted-foreground/50 font-mono text-sm">{"// role"}</span>
               <motion.span
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.6, delay: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
-                className="text-2xl md:text-3xl text-muted-foreground inline-block"
+                className="text-2xl md:text-3xl text-muted-foreground block"
               >
                 Full Stack Engineer
               </motion.span>
