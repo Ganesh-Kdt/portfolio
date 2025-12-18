@@ -6,59 +6,60 @@
 
 @layer base {
   :root {
-    /* Background: Sage Gray (#E0E5E2) */
-    --background: 144 10% 89%;
-    /* Foreground: Forest Charcoal (#2D3631) */
-    --foreground: 147 9% 19%;
+    /* Background: True Black (#000000) */
+    --background: 0 0% 0%;
+    /* Foreground: Clean white for text */
+    --foreground: 0 0% 98%;
 
-    /* Card: Pure white for containers */
-    --card: 0 0% 100%;
-    --card-foreground: 147 9% 19%;
+    /* Card: Surface (#1C1C1E) */
+    --card: 240 3% 11%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 147 9% 19%;
+    --popover: 240 3% 11%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Primary: Forest Charcoal - strong contrast */
-    --primary: 147 9% 19%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary: Electric Lime (#C5FF4A) */
+    --primary: 79 100% 65%;
+    --primary-foreground: 0 0% 0%;
 
-    /* Secondary: Lighter sage */
-    --secondary: 144 8% 82%;
-    --secondary-foreground: 147 9% 19%;
+    /* Secondary: Darker surface */
+    --secondary: 240 3% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    /* Muted: Soft sage tones */
-    --muted: 144 8% 85%;
-    --muted-foreground: 147 6% 40%;
+    /* Muted: Soft gray tones */
+    --muted: 240 3% 14%;
+    /* Muted foreground: Soft Text (#A1A1AA) */
+    --muted-foreground: 240 5% 65%;
 
-    /* Accent: Muted Sand (#B89D7E) for hover/highlights */
-    --accent: 32 30% 61%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent: Electric Lime */
+    --accent: 79 100% 65%;
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 65% 50%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
 
-    /* Border: Subtle sage edge */
-    --border: 144 8% 78%;
-    --input: 144 8% 78%;
-    --ring: 32 30% 61%;
+    /* Border: Subtle dark edge */
+    --border: 240 3% 18%;
+    --input: 240 3% 18%;
+    --ring: 79 100% 65%;
 
     --radius: 0.75rem;
 
-    /* Custom colors for portfolio - earthy elegant palette */
-    --cyan: 32 30% 61%;       /* Muted Sand - main accent */
-    --purple: 147 9% 25%;     /* Dark forest - secondary */
-    --pink: 32 35% 70%;       /* Light sand - tertiary */
-    --gradient-start: 32 30% 61%;
-    --gradient-end: 147 9% 25%;
+    /* Custom colors for portfolio - electric lime palette */
+    --cyan: 79 100% 65%;      /* Electric Lime - main accent */
+    --purple: 79 80% 50%;     /* Deeper lime - secondary */
+    --pink: 79 100% 75%;      /* Light lime - tertiary */
+    --gradient-start: 79 100% 65%;
+    --gradient-end: 79 80% 45%;
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 147 9% 19%;
-    --sidebar-primary: 147 9% 19%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 144 8% 85%;
-    --sidebar-accent-foreground: 147 9% 19%;
-    --sidebar-border: 144 8% 78%;
-    --sidebar-ring: 32 30% 61%;
+    --sidebar-background: 240 3% 11%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 79 100% 65%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 240 3% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 240 3% 18%;
+    --sidebar-ring: 79 100% 65%;
   }
 }
 
