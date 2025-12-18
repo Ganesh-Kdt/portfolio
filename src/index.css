@@ -6,59 +6,59 @@
 
 @layer base {
   :root {
-    /* Background: Deep midnight blue */
-    --background: 230 25% 8%;
-    /* Foreground: Clean white */
-    --foreground: 0 0% 95%;
+    /* Background: Sage Gray (#E0E5E2) */
+    --background: 144 10% 89%;
+    /* Foreground: Forest Charcoal (#2D3631) */
+    --foreground: 147 9% 19%;
 
-    /* Card: Elevated dark blue */
-    --card: 230 20% 12%;
-    --card-foreground: 0 0% 96%;
+    /* Card: Pure white for containers */
+    --card: 0 0% 100%;
+    --card-foreground: 147 9% 19%;
 
-    --popover: 230 20% 12%;
-    --popover-foreground: 0 0% 96%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 147 9% 19%;
 
-    /* Primary: Electric cyan */
-    --primary: 185 100% 50%;
-    --primary-foreground: 230 25% 8%;
+    /* Primary: Forest Charcoal - strong contrast */
+    --primary: 147 9% 19%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Deep violet */
-    --secondary: 265 85% 55%;
-    --secondary-foreground: 0 0% 98%;
+    /* Secondary: Lighter sage */
+    --secondary: 144 8% 82%;
+    --secondary-foreground: 147 9% 19%;
 
-    /* Muted: Dark slate */
-    --muted: 230 18% 16%;
-    --muted-foreground: 220 10% 60%;
+    /* Muted: Soft sage tones */
+    --muted: 144 8% 85%;
+    --muted-foreground: 147 6% 40%;
 
-    /* Accent: Hot magenta */
-    --accent: 320 90% 60%;
-    --accent-foreground: 0 0% 98%;
+    /* Accent: Muted Sand (#B89D7E) for hover/highlights */
+    --accent: 32 30% 61%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 75% 55%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    /* Border: Subtle glow edge */
-    --border: 230 15% 20%;
-    --input: 230 15% 20%;
-    --ring: 185 100% 50%;
+    /* Border: Subtle sage edge */
+    --border: 144 8% 78%;
+    --input: 144 8% 78%;
+    --ring: 32 30% 61%;
 
     --radius: 0.75rem;
 
-    /* Custom colors for portfolio - vibrant tech palette */
-    --cyan: 185 100% 50%;     /* Electric cyan - main */
-    --purple: 265 85% 60%;    /* Vivid violet - secondary */
-    --pink: 320 90% 60%;      /* Hot magenta - accent */
-    --gradient-start: 185 100% 50%;
-    --gradient-end: 320 90% 60%;
+    /* Custom colors for portfolio - earthy elegant palette */
+    --cyan: 32 30% 61%;       /* Muted Sand - main accent */
+    --purple: 147 9% 25%;     /* Dark forest - secondary */
+    --pink: 32 35% 70%;       /* Light sand - tertiary */
+    --gradient-start: 32 30% 61%;
+    --gradient-end: 147 9% 25%;
 
-    --sidebar-background: 230 20% 12%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 185 100% 50%;
-    --sidebar-primary-foreground: 230 25% 8%;
-    --sidebar-accent: 230 18% 18%;
-    --sidebar-accent-foreground: 0 0% 96%;
-    --sidebar-border: 230 15% 20%;
-    --sidebar-ring: 185 100% 50%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 147 9% 19%;
+    --sidebar-primary: 147 9% 19%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 144 8% 85%;
+    --sidebar-accent-foreground: 147 9% 19%;
+    --sidebar-border: 144 8% 78%;
+    --sidebar-ring: 32 30% 61%;
   }
 }
 
