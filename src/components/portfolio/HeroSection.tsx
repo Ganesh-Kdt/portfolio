@@ -89,22 +89,24 @@ const HeroSection = () => {
         }}
       />
       
-      {/* Animated tech dots */}
+      {/* Animated tech dots - subtle */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(50)].map((_, i) => (
+        {[...Array(40)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 rounded-full bg-cyan/30"
+            className="absolute rounded-full bg-foreground/10"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+              width: `${1 + Math.random() * 2}px`,
+              height: `${1 + Math.random() * 2}px`,
             }}
             animate={{
-              opacity: [0.1, 0.5, 0.1],
-              scale: [1, 1.5, 1],
+              opacity: [0.05, 0.2, 0.05],
+              scale: [1, 1.2, 1],
             }}
             transition={{
-              duration: 3 + Math.random() * 4,
+              duration: 4 + Math.random() * 4,
               repeat: Infinity,
               delay: Math.random() * 3,
             }}
