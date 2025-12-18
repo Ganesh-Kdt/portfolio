@@ -6,59 +6,59 @@
 
 @layer base {
   :root {
-    /* Background: Parchment (F6F2F0) - warm off-white */
-    --background: 20 23% 95%;
-    /* Foreground: Dark brown for high contrast */
-    --foreground: 20 25% 15%;
+    /* Background: Deep warm charcoal */
+    --background: 220 12% 7%;
+    /* Foreground: Warm off-white */
+    --foreground: 40 15% 90%;
 
-    /* Card: Seashell (F3E7E4) */
-    --card: 12 33% 92%;
-    --card-foreground: 20 25% 12%;
+    /* Card: Slightly elevated charcoal */
+    --card: 220 10% 11%;
+    --card-foreground: 40 15% 92%;
 
-    --popover: 12 33% 92%;
-    --popover-foreground: 20 25% 12%;
+    --popover: 220 10% 11%;
+    --popover-foreground: 40 15% 92%;
 
-    /* Primary: Desert Sand (D0B49F) - warmest accent */
-    --primary: 26 35% 60%;
-    --primary-foreground: 20 25% 10%;
+    /* Primary: Muted amber/gold - distinctive tech accent */
+    --primary: 42 75% 50%;
+    --primary-foreground: 220 12% 7%;
 
-    /* Secondary: Almond Silk (E7D1C9) */
-    --secondary: 16 38% 85%;
-    --secondary-foreground: 20 25% 15%;
+    /* Secondary: Warm slate */
+    --secondary: 220 10% 18%;
+    --secondary-foreground: 40 15% 88%;
 
-    /* Muted: Linen (F1E7DD) */
-    --muted: 30 37% 91%;
-    --muted-foreground: 20 20% 40%;
+    /* Muted: Dark warm gray */
+    --muted: 220 10% 15%;
+    --muted-foreground: 220 8% 55%;
 
-    /* Accent: Desert Sand darker for pop */
-    --accent: 26 40% 55%;
-    --accent-foreground: 20 23% 95%;
+    /* Accent: Soft teal for contrast */
+    --accent: 175 35% 42%;
+    --accent-foreground: 40 15% 95%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 20 23% 95%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 40 15% 95%;
 
-    /* Border: Almond Silk */
-    --border: 16 30% 80%;
-    --input: 16 30% 80%;
-    --ring: 26 35% 55%;
+    /* Border: Subtle warm edge */
+    --border: 220 10% 16%;
+    --input: 220 10% 16%;
+    --ring: 42 75% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Custom colors for portfolio */
-    --cyan: 26 40% 55%;      /* Desert Sand - main accent */
-    --purple: 16 38% 70%;    /* Almond Silk darker - secondary */
-    --pink: 20 35% 45%;      /* Warm brown - tertiary */
-    --gradient-start: 26 40% 55%;
-    --gradient-end: 16 38% 70%;
+    /* Custom colors for portfolio - tech palette */
+    --cyan: 42 75% 50%;      /* Amber gold - main accent */
+    --purple: 175 35% 42%;   /* Muted teal - secondary */
+    --pink: 42 60% 65%;      /* Light amber - tertiary */
+    --gradient-start: 42 75% 50%;
+    --gradient-end: 175 35% 42%;
 
-    --sidebar-background: 12 33% 92%;
-    --sidebar-foreground: 20 25% 15%;
-    --sidebar-primary: 26 35% 60%;
-    --sidebar-primary-foreground: 20 25% 10%;
-    --sidebar-accent: 30 37% 88%;
-    --sidebar-accent-foreground: 20 25% 15%;
-    --sidebar-border: 16 30% 80%;
-    --sidebar-ring: 26 35% 55%;
+    --sidebar-background: 220 10% 11%;
+    --sidebar-foreground: 40 15% 90%;
+    --sidebar-primary: 42 75% 50%;
+    --sidebar-primary-foreground: 220 12% 7%;
+    --sidebar-accent: 220 10% 15%;
+    --sidebar-accent-foreground: 40 15% 92%;
+    --sidebar-border: 220 10% 16%;
+    --sidebar-ring: 42 75% 50%;
   }
 }
 
