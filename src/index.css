@@ -6,51 +6,59 @@
 
 @layer base {
   :root {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
+    /* Background: Darkest green (132A13 - Evergreen) */
+    --background: 120 38% 12%;
+    /* Foreground: Light cream (ECF39E - Lime Cream) for high readability */
+    --foreground: 65 78% 79%;
 
-    --card: 222 47% 8%;
-    --card-foreground: 210 40% 98%;
+    /* Card: Slightly lighter dark green (31572C - Hunter Green) */
+    --card: 113 33% 18%;
+    --card-foreground: 65 78% 85%;
 
-    --popover: 222 47% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 113 33% 18%;
+    --popover-foreground: 65 78% 85%;
 
-    --primary: 190 95% 50%;
-    --primary-foreground: 222 47% 6%;
+    /* Primary: Bright lemon lime accent (CADA1B) for high contrast */
+    --primary: 65 78% 48%;
+    --primary-foreground: 120 38% 12%;
 
-    --secondary: 270 70% 60%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary: Fern green (4F772D) */
+    --secondary: 92 45% 32%;
+    --secondary-foreground: 65 78% 85%;
 
-    --muted: 222 30% 15%;
-    --muted-foreground: 215 20% 65%;
+    /* Muted: Hunter green variation */
+    --muted: 113 33% 22%;
+    --muted-foreground: 78 33% 60%;
 
-    --accent: 270 70% 60%;
-    --accent-foreground: 210 40% 98%;
+    /* Accent: Palm leaf (90A955) for softer highlights */
+    --accent: 78 33% 50%;
+    --accent-foreground: 120 38% 12%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 65 78% 85%;
 
-    --border: 222 30% 18%;
-    --input: 222 30% 18%;
-    --ring: 190 95% 50%;
+    /* Border: Subtle green border */
+    --border: 113 33% 25%;
+    --input: 113 33% 25%;
+    --ring: 65 78% 48%;
 
     --radius: 0.75rem;
 
-    /* Custom colors for portfolio */
-    --cyan: 190 95% 50%;
-    --purple: 270 70% 60%;
-    --pink: 330 80% 65%;
-    --gradient-start: 190 95% 50%;
-    --gradient-end: 270 70% 60%;
+    /* Custom colors for portfolio - nature green palette */
+    --cyan: 65 78% 48%;      /* Lemon Lime - bright accent */
+    --purple: 78 33% 50%;    /* Palm Leaf - mid tone */
+    --pink: 92 45% 40%;      /* Fern lighter - third accent */
+    --gradient-start: 65 78% 48%;
+    --gradient-end: 78 33% 50%;
 
-    --sidebar-background: 222 47% 8%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 190 95% 50%;
-    --sidebar-primary-foreground: 222 47% 6%;
-    --sidebar-accent: 222 30% 15%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 222 30% 18%;
-    --sidebar-ring: 190 95% 50%;
+    --sidebar-background: 113 33% 18%;
+    --sidebar-foreground: 65 78% 79%;
+    --sidebar-primary: 65 78% 48%;
+    --sidebar-primary-foreground: 120 38% 12%;
+    --sidebar-accent: 113 33% 25%;
+    --sidebar-accent-foreground: 65 78% 85%;
+    --sidebar-border: 113 33% 25%;
+    --sidebar-ring: 65 78% 48%;
   }
 }
 
