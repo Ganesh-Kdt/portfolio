@@ -74,47 +74,69 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden noise-bg"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{ background: "hsl(225 50% 3%)" }}
     >
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute -inset-[100px] opacity-30"
-          style={{
-            background: "radial-gradient(circle at 20% 80%, hsl(var(--cyan) / 0.4) 0%, transparent 50%), radial-gradient(circle at 80% 20%, hsl(var(--purple) / 0.4) 0%, transparent 50%), radial-gradient(circle at 40% 40%, hsl(var(--pink) / 0.3) 0%, transparent 40%)",
-          }}
-          animate={{
-            scale: [1, 1.1, 1],
-            rotate: [0, 5, -5, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute -inset-[100px] opacity-20"
-          style={{
-            background: "radial-gradient(circle at 70% 70%, hsl(var(--pink) / 0.5) 0%, transparent 45%), radial-gradient(circle at 30% 30%, hsl(var(--cyan) / 0.4) 0%, transparent 45%)",
-          }}
-          animate={{
-            scale: [1.1, 1, 1.1],
-            rotate: [0, -8, 8, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      </div>
-      
-      {/* Subtle mesh gradient overlay */}
+      {/* Tech grid pattern */}
       <div 
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0 opacity-[0.15]"
         style={{
-          background: "linear-gradient(135deg, hsl(var(--background)) 0%, transparent 50%, hsl(var(--background)) 100%)",
+          backgroundImage: `
+            linear-gradient(hsl(var(--cyan) / 0.3) 1px, transparent 1px),
+            linear-gradient(90deg, hsl(var(--cyan) / 0.3) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px',
+        }}
+      />
+      
+      {/* Animated tech dots */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(50)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 rounded-full bg-cyan/30"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              opacity: [0.1, 0.5, 0.1],
+              scale: [1, 1.5, 1],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 4,
+              repeat: Infinity,
+              delay: Math.random() * 3,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Gradient glow spots */}
+      <motion.div
+        className="absolute top-1/4 -left-20 w-80 h-80 rounded-full opacity-20 blur-3xl"
+        style={{ background: "hsl(var(--cyan))" }}
+        animate={{ 
+          scale: [1, 1.2, 1],
+          opacity: [0.15, 0.25, 0.15],
+        }}
+        transition={{ duration: 8, repeat: Infinity }}
+      />
+      <motion.div
+        className="absolute bottom-1/4 -right-20 w-96 h-96 rounded-full opacity-15 blur-3xl"
+        style={{ background: "hsl(var(--pink))" }}
+        animate={{ 
+          scale: [1.2, 1, 1.2],
+          opacity: [0.1, 0.2, 0.1],
+        }}
+        transition={{ duration: 10, repeat: Infinity }}
+      />
+
+      {/* Subtle scanlines */}
+      <div 
+        className="absolute inset-0 pointer-events-none opacity-[0.03]"
+        style={{
+          background: 'repeating-linear-gradient(0deg, transparent, transparent 2px, hsl(var(--foreground)) 2px, hsl(var(--foreground)) 3px)',
         }}
       />
       {/* Loading overlay */}
