@@ -77,15 +77,15 @@ const HeroSection = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ background: "hsl(225 50% 3%)" }}
     >
-      {/* Tech grid pattern - subtle fine grid */}
+      {/* Tech grid pattern */}
       <div 
-        className="absolute inset-0 opacity-[0.06]"
+        className="absolute inset-0 opacity-[0.15]"
         style={{
           backgroundImage: `
-            linear-gradient(hsl(var(--foreground) / 0.4) 0.5px, transparent 0.5px),
-            linear-gradient(90deg, hsl(var(--foreground) / 0.4) 0.5px, transparent 0.5px)
+            linear-gradient(hsl(var(--cyan) / 0.3) 1px, transparent 1px),
+            linear-gradient(90deg, hsl(var(--cyan) / 0.3) 1px, transparent 1px)
           `,
-          backgroundSize: '25px 25px',
+          backgroundSize: '60px 60px',
         }}
       />
       
