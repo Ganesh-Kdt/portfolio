@@ -18,20 +18,20 @@
     --popover: 217 32% 19%;
     --popover-foreground: 220 20% 95%;
 
-    /* Primary: Rosy Copper (D66853) - warm accent */
-    --primary: 10 62% 58%;
+    /* Primary: Sweet Salmon (E08C7B) - warm accent */
+    --primary: 10 60% 68%;
     --primary-foreground: 218 24% 9%;
 
-    /* Secondary: Smoky Rose (7D4E57) */
-    --secondary: 348 23% 40%;
+    /* Secondary: Smoky Rose (985D6A) */
+    --secondary: 347 24% 48%;
     --secondary-foreground: 220 20% 95%;
 
     /* Muted: Charcoal Blue (364156) */
     --muted: 219 23% 27%;
     --muted-foreground: 220 15% 65%;
 
-    /* Accent: Rosy Copper lighter */
-    --accent: 10 62% 58%;
+    /* Accent: Sweet Salmon */
+    --accent: 10 60% 68%;
     --accent-foreground: 218 24% 9%;
 
     --destructive: 0 84% 60%;
@@ -40,16 +40,16 @@
     /* Border: Charcoal Blue */
     --border: 219 23% 22%;
     --input: 219 23% 22%;
-    --ring: 10 62% 58%;
+    --ring: 10 60% 68%;
 
     --radius: 0.75rem;
 
     /* Custom colors for portfolio */
-    --cyan: 10 62% 58%;      /* Rosy Copper - main accent */
-    --purple: 348 23% 45%;   /* Smoky Rose - secondary */
-    --pink: 15 55% 65%;      /* Lighter copper - tertiary */
-    --gradient-start: 10 62% 58%;
-    --gradient-end: 348 23% 45%;
+    --cyan: 10 60% 68%;      /* Sweet Salmon - main accent */
+    --purple: 347 24% 48%;   /* Smoky Rose - secondary */
+    --pink: 15 65% 75%;      /* Lighter salmon - tertiary */
+    --gradient-start: 10 60% 68%;
+    --gradient-end: 347 24% 48%;
 
     --sidebar-background: 217 32% 19%;
     --sidebar-foreground: 220 20% 92%;
