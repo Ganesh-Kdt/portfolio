@@ -6,59 +6,59 @@
 
 @layer base {
   :root {
-    /* Background: Ink Black (11151C) */
-    --background: 218 24% 9%;
-    /* Foreground: Light for high contrast */
-    --foreground: 220 20% 92%;
+    /* Background: Parchment (F6F2F0) - warm off-white */
+    --background: 20 23% 95%;
+    /* Foreground: Dark brown for high contrast */
+    --foreground: 20 25% 15%;
 
-    /* Card: Deep Space Blue (212D40) */
-    --card: 217 32% 19%;
-    --card-foreground: 220 20% 95%;
+    /* Card: Seashell (F3E7E4) */
+    --card: 12 33% 92%;
+    --card-foreground: 20 25% 12%;
 
-    --popover: 217 32% 19%;
-    --popover-foreground: 220 20% 95%;
+    --popover: 12 33% 92%;
+    --popover-foreground: 20 25% 12%;
 
-    /* Primary: Sweet Salmon (E08C7B) - warm accent */
-    --primary: 10 60% 68%;
-    --primary-foreground: 218 24% 9%;
+    /* Primary: Desert Sand (D0B49F) - warmest accent */
+    --primary: 26 35% 60%;
+    --primary-foreground: 20 25% 10%;
 
-    /* Secondary: Smoky Rose (985D6A) */
-    --secondary: 347 24% 48%;
-    --secondary-foreground: 220 20% 95%;
+    /* Secondary: Almond Silk (E7D1C9) */
+    --secondary: 16 38% 85%;
+    --secondary-foreground: 20 25% 15%;
 
-    /* Muted: Charcoal Blue (364156) */
-    --muted: 219 23% 27%;
-    --muted-foreground: 220 15% 65%;
+    /* Muted: Linen (F1E7DD) */
+    --muted: 30 37% 91%;
+    --muted-foreground: 20 20% 40%;
 
-    /* Accent: Sweet Salmon */
-    --accent: 10 60% 68%;
-    --accent-foreground: 218 24% 9%;
+    /* Accent: Desert Sand darker for pop */
+    --accent: 26 40% 55%;
+    --accent-foreground: 20 23% 95%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 220 20% 95%;
+    --destructive-foreground: 20 23% 95%;
 
-    /* Border: Charcoal Blue */
-    --border: 219 23% 22%;
-    --input: 219 23% 22%;
-    --ring: 10 60% 68%;
+    /* Border: Almond Silk */
+    --border: 16 30% 80%;
+    --input: 16 30% 80%;
+    --ring: 26 35% 55%;
 
     --radius: 0.75rem;
 
     /* Custom colors for portfolio */
-    --cyan: 10 60% 68%;      /* Sweet Salmon - main accent */
-    --purple: 347 24% 48%;   /* Smoky Rose - secondary */
-    --pink: 15 65% 75%;      /* Lighter salmon - tertiary */
-    --gradient-start: 10 60% 68%;
-    --gradient-end: 347 24% 48%;
+    --cyan: 26 40% 55%;      /* Desert Sand - main accent */
+    --purple: 16 38% 70%;    /* Almond Silk darker - secondary */
+    --pink: 20 35% 45%;      /* Warm brown - tertiary */
+    --gradient-start: 26 40% 55%;
+    --gradient-end: 16 38% 70%;
 
-    --sidebar-background: 217 32% 19%;
-    --sidebar-foreground: 220 20% 92%;
-    --sidebar-primary: 10 62% 58%;
-    --sidebar-primary-foreground: 218 24% 9%;
-    --sidebar-accent: 219 23% 27%;
-    --sidebar-accent-foreground: 220 20% 95%;
-    --sidebar-border: 219 23% 22%;
-    --sidebar-ring: 10 62% 58%;
+    --sidebar-background: 12 33% 92%;
+    --sidebar-foreground: 20 25% 15%;
+    --sidebar-primary: 26 35% 60%;
+    --sidebar-primary-foreground: 20 25% 10%;
+    --sidebar-accent: 30 37% 88%;
+    --sidebar-accent-foreground: 20 25% 15%;
+    --sidebar-border: 16 30% 80%;
+    --sidebar-ring: 26 35% 55%;
   }
 }
 
