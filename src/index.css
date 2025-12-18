@@ -6,59 +6,59 @@
 
 @layer base {
   :root {
-    /* Background: Darkest green (132A13 - Evergreen) */
-    --background: 120 38% 12%;
-    /* Foreground: Light cream (ECF39E - Lime Cream) for high readability */
-    --foreground: 65 78% 79%;
+    /* Background: Very dark forest green */
+    --background: 120 40% 6%;
+    /* Foreground: Bright cream for maximum readability */
+    --foreground: 60 80% 90%;
 
-    /* Card: Slightly lighter dark green (31572C - Hunter Green) */
-    --card: 113 33% 18%;
-    --card-foreground: 65 78% 85%;
+    /* Card: Slightly lighter but still very dark */
+    --card: 120 35% 10%;
+    --card-foreground: 60 80% 92%;
 
-    --popover: 113 33% 18%;
-    --popover-foreground: 65 78% 85%;
+    --popover: 120 35% 10%;
+    --popover-foreground: 60 80% 92%;
 
-    /* Primary: Bright lemon lime accent (CADA1B) for high contrast */
-    --primary: 65 78% 48%;
-    --primary-foreground: 120 38% 12%;
+    /* Primary: Bright orange-yellow accent */
+    --primary: 45 95% 55%;
+    --primary-foreground: 120 40% 6%;
 
-    /* Secondary: Fern green (4F772D) */
-    --secondary: 92 45% 32%;
-    --secondary-foreground: 65 78% 85%;
+    /* Secondary: Warm orange */
+    --secondary: 30 90% 50%;
+    --secondary-foreground: 60 80% 95%;
 
-    /* Muted: Hunter green variation */
-    --muted: 113 33% 22%;
-    --muted-foreground: 78 33% 60%;
+    /* Muted: Dark green */
+    --muted: 120 30% 14%;
+    --muted-foreground: 60 40% 65%;
 
-    /* Accent: Palm leaf (90A955) for softer highlights */
-    --accent: 78 33% 50%;
-    --accent-foreground: 120 38% 12%;
+    /* Accent: Bright yellow-green */
+    --accent: 65 85% 50%;
+    --accent-foreground: 120 40% 6%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 65 78% 85%;
+    --destructive-foreground: 60 80% 92%;
 
     /* Border: Subtle green border */
-    --border: 113 33% 25%;
-    --input: 113 33% 25%;
-    --ring: 65 78% 48%;
+    --border: 120 30% 18%;
+    --input: 120 30% 18%;
+    --ring: 45 95% 55%;
 
     --radius: 0.75rem;
 
-    /* Custom colors for portfolio - nature green palette */
-    --cyan: 65 78% 48%;      /* Lemon Lime - bright accent */
-    --purple: 78 33% 50%;    /* Palm Leaf - mid tone */
-    --pink: 92 45% 40%;      /* Fern lighter - third accent */
-    --gradient-start: 65 78% 48%;
-    --gradient-end: 78 33% 50%;
+    /* Custom colors for portfolio - nature with warm accents */
+    --cyan: 45 95% 55%;      /* Golden yellow - main accent */
+    --purple: 30 90% 50%;    /* Warm orange - secondary */
+    --pink: 65 85% 50%;      /* Lime green - tertiary */
+    --gradient-start: 45 95% 55%;
+    --gradient-end: 30 90% 50%;
 
-    --sidebar-background: 113 33% 18%;
-    --sidebar-foreground: 65 78% 79%;
-    --sidebar-primary: 65 78% 48%;
-    --sidebar-primary-foreground: 120 38% 12%;
-    --sidebar-accent: 113 33% 25%;
-    --sidebar-accent-foreground: 65 78% 85%;
-    --sidebar-border: 113 33% 25%;
-    --sidebar-ring: 65 78% 48%;
+    --sidebar-background: 120 35% 10%;
+    --sidebar-foreground: 60 80% 90%;
+    --sidebar-primary: 45 95% 55%;
+    --sidebar-primary-foreground: 120 40% 6%;
+    --sidebar-accent: 120 30% 16%;
+    --sidebar-accent-foreground: 60 80% 92%;
+    --sidebar-border: 120 30% 18%;
+    --sidebar-ring: 45 95% 55%;
   }
 }
 
