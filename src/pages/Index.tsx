@@ -1,10 +1,23 @@
+import HeroSection from "@/components/portfolio/HeroSection";
+import AboutSection from "@/components/portfolio/AboutSection";
+import ExperienceSection from "@/components/portfolio/ExperienceSection";
+import EducationSection from "@/components/portfolio/EducationSection";
+import CertificationsSection from "@/components/portfolio/CertificationsSection";
+import ProjectsSection from "@/components/portfolio/ProjectsSection";
+import ContactSection from "@/components/portfolio/ContactSection";
+import ChatbotNav from "@/components/portfolio/ChatbotNav";
+
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center space-y-4">
-        <h1 className="text-3xl font-semibold text-foreground">Blank Project</h1>
-        <p className="text-muted-foreground"></p>
-      </div>
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <HeroSection />
+      <AboutSection />
+      <ExperienceSection />
+      <EducationSection />
+      <CertificationsSection />
+      <ProjectsSection />
+      <ContactSection />
+      <ChatbotNav />
     </div>
   );
 };
