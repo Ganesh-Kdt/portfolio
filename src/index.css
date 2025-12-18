@@ -6,8 +6,8 @@
 
 @layer base {
   :root {
-    /* Background: Deep rich navy */
-    --background: 222 40% 10%;
+    /* Background: Deep dark navy */
+    --background: 225 45% 5%;
     /* Foreground: Soft cream white */
     --foreground: 30 20% 94%;
 
