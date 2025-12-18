@@ -6,59 +6,59 @@
 
 @layer base {
   :root {
-    /* Background: Deep warm charcoal */
-    --background: 220 12% 7%;
-    /* Foreground: Warm off-white */
-    --foreground: 40 15% 90%;
+    /* Background: Deep midnight blue */
+    --background: 230 25% 8%;
+    /* Foreground: Clean white */
+    --foreground: 0 0% 95%;
 
-    /* Card: Slightly elevated charcoal */
-    --card: 220 10% 11%;
-    --card-foreground: 40 15% 92%;
+    /* Card: Elevated dark blue */
+    --card: 230 20% 12%;
+    --card-foreground: 0 0% 96%;
 
-    --popover: 220 10% 11%;
-    --popover-foreground: 40 15% 92%;
+    --popover: 230 20% 12%;
+    --popover-foreground: 0 0% 96%;
 
-    /* Primary: Muted amber/gold - distinctive tech accent */
-    --primary: 42 75% 50%;
-    --primary-foreground: 220 12% 7%;
+    /* Primary: Electric cyan */
+    --primary: 185 100% 50%;
+    --primary-foreground: 230 25% 8%;
 
-    /* Secondary: Warm slate */
-    --secondary: 220 10% 18%;
-    --secondary-foreground: 40 15% 88%;
+    /* Secondary: Deep violet */
+    --secondary: 265 85% 55%;
+    --secondary-foreground: 0 0% 98%;
 
-    /* Muted: Dark warm gray */
-    --muted: 220 10% 15%;
-    --muted-foreground: 220 8% 55%;
+    /* Muted: Dark slate */
+    --muted: 230 18% 16%;
+    --muted-foreground: 220 10% 60%;
 
-    /* Accent: Soft teal for contrast */
-    --accent: 175 35% 42%;
-    --accent-foreground: 40 15% 95%;
+    /* Accent: Hot magenta */
+    --accent: 320 90% 60%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 65% 50%;
-    --destructive-foreground: 40 15% 95%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
 
-    /* Border: Subtle warm edge */
-    --border: 220 10% 16%;
-    --input: 220 10% 16%;
-    --ring: 42 75% 50%;
+    /* Border: Subtle glow edge */
+    --border: 230 15% 20%;
+    --input: 230 15% 20%;
+    --ring: 185 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Custom colors for portfolio - tech palette */
-    --cyan: 42 75% 50%;      /* Amber gold - main accent */
-    --purple: 175 35% 42%;   /* Muted teal - secondary */
-    --pink: 42 60% 65%;      /* Light amber - tertiary */
-    --gradient-start: 42 75% 50%;
-    --gradient-end: 175 35% 42%;
+    /* Custom colors for portfolio - vibrant tech palette */
+    --cyan: 185 100% 50%;     /* Electric cyan - main */
+    --purple: 265 85% 60%;    /* Vivid violet - secondary */
+    --pink: 320 90% 60%;      /* Hot magenta - accent */
+    --gradient-start: 185 100% 50%;
+    --gradient-end: 320 90% 60%;
 
-    --sidebar-background: 220 10% 11%;
-    --sidebar-foreground: 40 15% 90%;
-    --sidebar-primary: 42 75% 50%;
-    --sidebar-primary-foreground: 220 12% 7%;
-    --sidebar-accent: 220 10% 15%;
-    --sidebar-accent-foreground: 40 15% 92%;
-    --sidebar-border: 220 10% 16%;
-    --sidebar-ring: 42 75% 50%;
+    --sidebar-background: 230 20% 12%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 185 100% 50%;
+    --sidebar-primary-foreground: 230 25% 8%;
+    --sidebar-accent: 230 18% 18%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 230 15% 20%;
+    --sidebar-ring: 185 100% 50%;
   }
 }
 
@@ -135,111 +135,4 @@
     perspective: 1000px;
   }
 
-  /* Terminal/Code-inspired styles */
-  .terminal-window {
-    @apply bg-card/80 backdrop-blur-sm border border-border rounded-lg overflow-hidden;
-    box-shadow: 0 4px 24px hsl(var(--background) / 0.5);
-  }
-
-  .terminal-header {
-    @apply flex items-center gap-2 px-4 py-2 bg-muted/50 border-b border-border;
-  }
-
-  .terminal-dot {
-    @apply w-3 h-3 rounded-full;
-  }
-
-  .terminal-body {
-    @apply p-4 font-mono text-sm;
-  }
-
-  .code-line {
-    @apply flex items-start gap-4;
-  }
-
-  .line-number {
-    @apply text-muted-foreground/40 select-none w-6 text-right;
-  }
-
-  .code-comment {
-    @apply text-muted-foreground/60 italic;
-  }
-
-  .code-keyword {
-    @apply text-purple;
-  }
-
-  .code-string {
-    @apply text-accent;
-  }
-
-  .code-function {
-    @apply text-cyan;
-  }
-
-  /* Grid pattern background */
-  .grid-pattern {
-    background-image: 
-      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
-
-  /* Dot pattern background */
-  .dot-pattern {
-    background-image: radial-gradient(hsl(var(--border) / 0.5) 1px, transparent 1px);
-    background-size: 20px 20px;
-  }
-
-  /* Scanline effect */
-  .scanlines::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      hsl(var(--foreground) / 0.02) 2px,
-      hsl(var(--foreground) / 0.02) 4px
-    );
-    pointer-events: none;
-  }
-
-  /* Blinking cursor */
-  .cursor-blink {
-    animation: blink 1s step-end infinite;
-  }
-
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
-
-  /* Terminal corner brackets */
-  .terminal-corners {
-    position: relative;
-  }
-
-  .terminal-corners::before,
-  .terminal-corners::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-color: hsl(var(--cyan) / 0.5);
-    border-style: solid;
-  }
-
-  .terminal-corners::before {
-    top: -1px;
-    left: -1px;
-    border-width: 2px 0 0 2px;
-  }
-
-  .terminal-corners::after {
-    bottom: -1px;
-    right: -1px;
-    border-width: 0 2px 2px 0;
-  }
 }
