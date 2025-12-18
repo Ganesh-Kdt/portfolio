@@ -6,59 +6,59 @@
 
 @layer base {
   :root {
-    /* Background: Very dark forest green */
-    --background: 120 40% 6%;
-    /* Foreground: Bright cream for maximum readability */
-    --foreground: 60 80% 90%;
+    /* Background: Ink Black (11151C) */
+    --background: 218 24% 9%;
+    /* Foreground: Light for high contrast */
+    --foreground: 220 20% 92%;
 
-    /* Card: Slightly lighter but still very dark */
-    --card: 120 35% 10%;
-    --card-foreground: 60 80% 92%;
+    /* Card: Deep Space Blue (212D40) */
+    --card: 217 32% 19%;
+    --card-foreground: 220 20% 95%;
 
-    --popover: 120 35% 10%;
-    --popover-foreground: 60 80% 92%;
+    --popover: 217 32% 19%;
+    --popover-foreground: 220 20% 95%;
 
-    /* Primary: Bright orange-yellow accent */
-    --primary: 45 95% 55%;
-    --primary-foreground: 120 40% 6%;
+    /* Primary: Rosy Copper (D66853) - warm accent */
+    --primary: 10 62% 58%;
+    --primary-foreground: 218 24% 9%;
 
-    /* Secondary: Warm orange */
-    --secondary: 30 90% 50%;
-    --secondary-foreground: 60 80% 95%;
+    /* Secondary: Smoky Rose (7D4E57) */
+    --secondary: 348 23% 40%;
+    --secondary-foreground: 220 20% 95%;
 
-    /* Muted: Dark green */
-    --muted: 120 30% 14%;
-    --muted-foreground: 60 40% 65%;
+    /* Muted: Charcoal Blue (364156) */
+    --muted: 219 23% 27%;
+    --muted-foreground: 220 15% 65%;
 
-    /* Accent: Bright yellow-green */
-    --accent: 65 85% 50%;
-    --accent-foreground: 120 40% 6%;
+    /* Accent: Rosy Copper lighter */
+    --accent: 10 62% 58%;
+    --accent-foreground: 218 24% 9%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 60 80% 92%;
+    --destructive-foreground: 220 20% 95%;
 
-    /* Border: Subtle green border */
-    --border: 120 30% 18%;
-    --input: 120 30% 18%;
-    --ring: 45 95% 55%;
+    /* Border: Charcoal Blue */
+    --border: 219 23% 22%;
+    --input: 219 23% 22%;
+    --ring: 10 62% 58%;
 
     --radius: 0.75rem;
 
-    /* Custom colors for portfolio - nature with warm accents */
-    --cyan: 45 95% 55%;      /* Golden yellow - main accent */
-    --purple: 30 90% 50%;    /* Warm orange - secondary */
-    --pink: 65 85% 50%;      /* Lime green - tertiary */
-    --gradient-start: 45 95% 55%;
-    --gradient-end: 30 90% 50%;
+    /* Custom colors for portfolio */
+    --cyan: 10 62% 58%;      /* Rosy Copper - main accent */
+    --purple: 348 23% 45%;   /* Smoky Rose - secondary */
+    --pink: 15 55% 65%;      /* Lighter copper - tertiary */
+    --gradient-start: 10 62% 58%;
+    --gradient-end: 348 23% 45%;
 
-    --sidebar-background: 120 35% 10%;
-    --sidebar-foreground: 60 80% 90%;
-    --sidebar-primary: 45 95% 55%;
-    --sidebar-primary-foreground: 120 40% 6%;
-    --sidebar-accent: 120 30% 16%;
-    --sidebar-accent-foreground: 60 80% 92%;
-    --sidebar-border: 120 30% 18%;
-    --sidebar-ring: 45 95% 55%;
+    --sidebar-background: 217 32% 19%;
+    --sidebar-foreground: 220 20% 92%;
+    --sidebar-primary: 10 62% 58%;
+    --sidebar-primary-foreground: 218 24% 9%;
+    --sidebar-accent: 219 23% 27%;
+    --sidebar-accent-foreground: 220 20% 95%;
+    --sidebar-border: 219 23% 22%;
+    --sidebar-ring: 10 62% 58%;
   }
 }
 
