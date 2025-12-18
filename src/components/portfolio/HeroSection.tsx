@@ -76,6 +76,47 @@ const HeroSection = () => {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden noise-bg"
     >
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          className="absolute -inset-[100px] opacity-30"
+          style={{
+            background: "radial-gradient(circle at 20% 80%, hsl(var(--cyan) / 0.4) 0%, transparent 50%), radial-gradient(circle at 80% 20%, hsl(var(--purple) / 0.4) 0%, transparent 50%), radial-gradient(circle at 40% 40%, hsl(var(--pink) / 0.3) 0%, transparent 40%)",
+          }}
+          animate={{
+            scale: [1, 1.1, 1],
+            rotate: [0, 5, -5, 0],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute -inset-[100px] opacity-20"
+          style={{
+            background: "radial-gradient(circle at 70% 70%, hsl(var(--pink) / 0.5) 0%, transparent 45%), radial-gradient(circle at 30% 30%, hsl(var(--cyan) / 0.4) 0%, transparent 45%)",
+          }}
+          animate={{
+            scale: [1.1, 1, 1.1],
+            rotate: [0, -8, 8, 0],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </div>
+      
+      {/* Subtle mesh gradient overlay */}
+      <div 
+        className="absolute inset-0 opacity-40"
+        style={{
+          background: "linear-gradient(135deg, hsl(var(--background)) 0%, transparent 50%, hsl(var(--background)) 100%)",
+        }}
+      />
       {/* Loading overlay */}
       <AnimatePresence>
         {isLoading && (
