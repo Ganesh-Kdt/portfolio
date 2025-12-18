@@ -316,9 +316,9 @@ const HeroSection = () => {
               </motion.div>
             </motion.div>
 
-            {/* Name with 3D letter animation */}
+            {/* Name with elegant serif typography */}
             <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-4 perspective-1000"
+              className="text-5xl md:text-7xl font-serif font-semibold mb-4 perspective-1000 tracking-tight"
             >
               <span className="inline-flex overflow-hidden">
                 {name.split("").map((letter, i) => (
@@ -335,6 +335,14 @@ const HeroSection = () => {
                   </motion.span>
                 ))}
               </span>
+              <motion.span 
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.2, type: "spring" }}
+                className="inline-block ml-2"
+              >
+                ✨
+              </motion.span>
             </motion.h1>
 
             {/* Title with slide-up reveal */}
