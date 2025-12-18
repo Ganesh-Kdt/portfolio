@@ -263,7 +263,7 @@ const HeroSection = () => {
             <motion.h1
               className="text-5xl md:text-7xl font-bold mb-4 perspective-1000"
             >
-              <span className="gradient-text inline-flex overflow-hidden">
+              <span className="inline-flex overflow-hidden">
                 {name.split("").map((letter, i) => (
                   <motion.span
                     key={i}
@@ -271,7 +271,7 @@ const HeroSection = () => {
                     variants={letterVariants}
                     initial="hidden"
                     animate="visible"
-                    className="inline-block"
+                    className="inline-block gradient-text"
                     style={{ transformStyle: "preserve-3d" }}
                   >
                     {letter === " " ? "\u00A0" : letter}
