@@ -450,33 +450,6 @@ const HeroSection = () => {
               ))}
             </motion.div>
 
-            {/* CTA Button with dramatic entrance */}
-            <motion.div
-              initial={{ opacity: 0, y: 50, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.6, delay: 2.8, type: "spring" }}
-              className="mb-24"
-            >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-cyan via-purple to-pink text-primary-foreground font-semibold px-8 py-6 text-lg rounded-full hover:opacity-90 transition-opacity relative overflow-hidden group"
-                  onClick={() =>
-                    document
-                      .getElementById("about")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
-                >
-                  <motion.span
-                    className="absolute inset-0 bg-gradient-to-r from-pink via-purple to-cyan opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  />
-                  <span className="relative z-10">Explore My Work</span>
-                </Button>
-              </motion.div>
-            </motion.div>
 
             {/* Scroll indicator arrow */}
             <motion.div
