@@ -464,7 +464,7 @@ const HeroSection = () => {
                     .getElementById("about")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="relative group cursor-pointer"
+                className="relative group cursor-pointer outline-none border-none bg-transparent"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
