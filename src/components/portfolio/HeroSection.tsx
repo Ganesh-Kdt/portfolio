@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, Linkedin, Mail, ChevronDown, ExternalLink, Download } from "lucide-react";
+import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
@@ -324,63 +324,6 @@ const HeroSection = () => {
               </motion.p>
             </motion.div>
 
-            {/* CTA Buttons Row */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-wrap justify-center gap-4 mb-8"
-            >
-              {/* Primary CTA */}
-              <motion.a
-                href="https://github.com/ganeshkudtarkar"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-pink to-purple text-primary-foreground font-semibold px-6 py-5 rounded-full hover:opacity-90 transition-all duration-300 gap-2"
-                >
-                  View My Projects
-                  <ExternalLink className="w-4 h-4" />
-                </Button>
-              </motion.a>
-
-              {/* Secondary CTA */}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => {
-                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-purple/50 text-foreground font-semibold px-6 py-5 rounded-full hover:bg-purple/10 hover:border-purple transition-all duration-300"
-                >
-                  Get In Touch
-                </Button>
-              </motion.button>
-
-              {/* Tertiary CTA */}
-              <motion.a
-                href="/resume.pdf"
-                target="_blank"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-cyan to-purple text-primary-foreground font-semibold px-6 py-5 rounded-full hover:opacity-90 transition-all duration-300 gap-2"
-                >
-                  Download Resume
-                  <Download className="w-4 h-4" />
-                </Button>
-              </motion.a>
-            </motion.div>
 
             {/* Name with clean modern typography */}
             <motion.h1
