@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import { Github, Linkedin, Mail, ChevronDown, Code2, Server, Cloud } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
@@ -388,6 +388,33 @@ const HeroSection = () => {
                 >
                   {word}
                 </motion.span>
+              ))}
+            </motion.div>
+
+            {/* Feature highlight cards */}
+            <motion.div
+              variants={itemVariants}
+              className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-10"
+            >
+              {[
+                { icon: Code2, title: "Clean Code", description: "Writing maintainable & efficient code", color: "cyan" },
+                { icon: Server, title: "Backend Architecture", description: "Scalable system design", color: "purple" },
+                { icon: Cloud, title: "Cloud Computing", description: "AWS & cloud-native solutions", color: "pink" },
+              ].map((feature, i) => (
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 2.2 + i * 0.15 }}
+                  whileHover={{ y: -4, scale: 1.02 }}
+                  className={`group p-5 rounded-xl bg-muted/30 border border-border/50 hover:border-${feature.color}/50 backdrop-blur-sm transition-all duration-300`}
+                >
+                  <div className={`w-10 h-10 rounded-lg bg-${feature.color}/10 flex items-center justify-center mb-3 group-hover:bg-${feature.color}/20 transition-colors`}>
+                    <feature.icon className={`w-5 h-5 text-${feature.color}`} />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-1">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground">{feature.description}</p>
+                </motion.div>
               ))}
             </motion.div>
 
