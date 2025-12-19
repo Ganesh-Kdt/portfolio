@@ -357,7 +357,7 @@ const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
                 className="text-2xl md:text-3xl text-muted-foreground inline-block"
               >
-                Full Stack Engineer
+                Software Engineer | M.S. CS @ UB
               </motion.span>
             </motion.div>
 
@@ -397,9 +397,9 @@ const HeroSection = () => {
               className="flex justify-center gap-4 mb-12"
             >
               {[
-                { href: "https://github.com/ganeshkudtarkar", icon: Github, color: "cyan", glow: "glow-cyan" },
-                { href: "https://linkedin.com/in/ganeshkudtarkar", icon: Linkedin, color: "purple", glow: "glow-purple" },
-                { href: "mailto:ganesh.kudtarkar@gmail.com", icon: Mail, color: "pink", glow: "" },
+                { href: "https://github.com/Ganesh-Kdt", icon: Github, color: "cyan", glow: "glow-cyan" },
+                { href: "https://linkedin.com/in/ganesh-kudtarkar", icon: Linkedin, color: "purple", glow: "glow-purple" },
+                { href: "mailto:gkudtarkar8@gmail.com", icon: Mail, color: "pink", glow: "" },
               ].map((social, i) => (
                 <motion.a
                   key={social.href}

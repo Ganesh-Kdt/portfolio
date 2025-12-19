@@ -7,9 +7,9 @@ const projects = [
   {
     title: "Query Classifier",
     description:
-      "An ML-powered system that classifies user queries into categories for intelligent routing and processing. Uses NLP techniques for accurate text classification.",
-    technologies: ["Python", "TensorFlow", "FastAPI", "PostgreSQL"],
-    github: "https://github.com/ganeshkudtarkar/query-classifier",
+      "Built a query classification project using Random Forest Classifier, classifying queries into Technical or Non-technical groups. Employed custom-trained Word2Vec model achieving 92% accuracy.",
+    technologies: ["Python", "Random Forest", "Word2Vec", "NLP"],
+    github: "https://github.com/Ganesh-Kdt",
     demo: null,
     featured: true,
     category: "AI/ML",
@@ -17,9 +17,9 @@ const projects = [
   {
     title: "QuizWhiz",
     description:
-      "AI-powered quiz generation platform that creates personalized quizzes from any topic or uploaded content. Features adaptive difficulty and detailed analytics.",
-    technologies: ["React", "TypeScript", "OpenAI API", "Node.js", "MongoDB"],
-    github: "https://github.com/ganeshkudtarkar/quizwhiz",
+      "AI-powered quiz generation tool developed during UB AI for Good Hackathon, leveraging class transcriptions to create MCQs. Implemented Hugging Face NLP models with React frontend and Django backend.",
+    technologies: ["React", "Django", "Hugging Face", "NLP"],
+    github: "https://github.com/Ganesh-Kdt",
     demo: null,
     featured: true,
     category: "AI/ML",
@@ -27,9 +27,9 @@ const projects = [
   {
     title: "Text Chat Application",
     description:
-      "Real-time chat application built from scratch using C++ and socket programming. Implements a custom protocol for message handling and multi-client support.",
-    technologies: ["C++", "Socket Programming", "Multi-threading", "TCP/IP"],
-    github: "https://github.com/ganeshkudtarkar/text-chat",
+      "Multi-client text chat application using TCP sockets in C++. Features client-server architecture with user authentication, message blocking/unblocking, broadcast messaging, and offline message buffering.",
+    technologies: ["C++", "TCP Sockets", "Multi-threading", "Client-Server"],
+    github: "https://github.com/Ganesh-Kdt",
     demo: null,
     featured: true,
     category: "Networking",
@@ -192,7 +192,7 @@ const ProjectsSection = () => {
             asChild
           >
             <a
-              href="https://github.com/ganeshkudtarkar"
+              href="https://github.com/Ganesh-Kdt"
               target="_blank"
               rel="noopener noreferrer"
             >
