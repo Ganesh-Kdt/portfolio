@@ -468,16 +468,12 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                {/* Glow ring */}
-                <motion.div
-                  className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan via-purple to-pink opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                />
+                {/* Glow effect */}
+                <div className="absolute inset-0 w-12 h-12 rounded-full bg-gradient-to-r from-cyan via-purple to-pink opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500" />
                 
                 {/* Arrow icon */}
                 <motion.div
-                  className="w-12 h-12 flex items-center justify-center"
+                  className="w-12 h-12 flex items-center justify-center relative"
                   animate={{ y: [0, 4, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
                 >
