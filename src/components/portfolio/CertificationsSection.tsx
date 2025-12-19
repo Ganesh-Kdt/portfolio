@@ -4,20 +4,20 @@ import { Award, ExternalLink, Calendar } from "lucide-react";
 
 const certifications = [
   {
-    name: "Microsoft Azure AI Fundamentals",
-    issuer: "Microsoft",
+    name: "Kubernetes for the Absolute Beginners",
+    issuer: "KodeKloud",
     date: "2024",
-    description: "AI concepts, machine learning, and Azure AI services fundamentals",
+    description: "Container orchestration, deployments, services, and scaling",
     color: "cyan",
-    icon: "🤖",
+    icon: "☸️",
   },
   {
-    name: "Machine Learning Specialization",
-    issuer: "DeepLearning.AI & Stanford Online (Coursera)",
-    date: "2024",
-    description: "Comprehensive ML training covering supervised, unsupervised learning and neural networks",
+    name: "AWS Cloud Practitioner Essentials",
+    issuer: "Amazon Web Services",
+    date: "2023",
+    description: "Cloud computing fundamentals, AWS services, and best practices",
     color: "purple",
-    icon: "🧠",
+    icon: "☁️",
   },
 ];
 

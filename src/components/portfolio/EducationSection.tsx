@@ -4,15 +4,15 @@ import { GraduationCap, Calendar, MapPin } from "lucide-react";
 
 const education = [
   {
-    institution: "University at Buffalo, The State University of New York",
-    degree: "Master of Science",
-    field: "Computer Science and Engineering",
-    period: "Aug 2024 - Dec 2025",
-    location: "Buffalo, NY",
+    institution: "University of Mumbai",
+    degree: "Bachelor of Engineering",
+    field: "Electronics and Telecommunications",
+    period: "2019 - 2023",
+    location: "Mumbai, India",
     highlights: [
-      "Pursuing advanced studies in computer science",
-      "Focus on software engineering and systems design",
-      "Participated in UB AI for Good Hackathon",
+      "Focused on signal processing and embedded systems",
+      "Completed capstone project on IoT-based smart systems",
+      "Active member of technical clubs and coding communities",
     ],
   },
 ];

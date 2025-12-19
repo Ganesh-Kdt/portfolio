@@ -79,17 +79,17 @@ const ContactSection = () => {
                 <h3 className="text-lg font-bold mb-4">Quick Links</h3>
                 <div className="space-y-4">
                   <motion.a
-                    href="mailto:gkudtarkar8@gmail.com"
+                    href="mailto:ganesh.kudtarkar@gmail.com"
                     whileHover={{ x: 5 }}
                     className="flex items-center gap-3 text-muted-foreground hover:text-cyan transition-colors"
                   >
                     <div className="p-2 rounded-lg bg-cyan/10 border border-cyan/30">
                       <Mail className="w-5 h-5 text-cyan" />
                     </div>
-                    <span>gkudtarkar8@gmail.com</span>
+                    <span>ganesh.kudtarkar@gmail.com</span>
                   </motion.a>
                   <motion.a
-                    href="https://github.com/Ganesh-Kdt"
+                    href="https://github.com/ganeshkudtarkar"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ x: 5 }}
@@ -98,10 +98,10 @@ const ContactSection = () => {
                     <div className="p-2 rounded-lg bg-purple/10 border border-purple/30">
                       <Github className="w-5 h-5 text-purple" />
                     </div>
-                    <span>github.com/Ganesh-Kdt</span>
+                    <span>github.com/ganeshkudtarkar</span>
                   </motion.a>
                   <motion.a
-                    href="https://linkedin.com/in/ganesh-kudtarkar"
+                    href="https://linkedin.com/in/ganeshkudtarkar"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ x: 5 }}
@@ -110,7 +110,7 @@ const ContactSection = () => {
                     <div className="p-2 rounded-lg bg-pink/10 border border-pink/30">
                       <Linkedin className="w-5 h-5 text-pink" />
                     </div>
-                    <span>linkedin.com/in/ganesh-kudtarkar</span>
+                    <span>linkedin.com/in/ganeshkudtarkar</span>
                   </motion.a>
                 </div>
               </div>
@@ -122,7 +122,7 @@ const ContactSection = () => {
                   <div className="p-2 rounded-lg bg-muted border border-border">
                     <MapPin className="w-5 h-5" />
                   </div>
-                  <span>Buffalo, NY</span>
+                  <span>Mumbai, India</span>
                 </div>
               </div>
             </motion.div>

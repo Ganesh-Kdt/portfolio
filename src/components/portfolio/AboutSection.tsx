@@ -3,10 +3,11 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const skills = {
-  languages: ["Golang", "Java", "Python", "JavaScript", "TypeScript"],
-  frameworks: ["Spring MVC", "Spring Boot", "React", "NestJS", "Next.js", "JUnit"],
-  databases: ["DynamoDB", "PostgreSQL", "MySQL", "Redis", "MongoDB"],
-  cloud: ["AWS Lambda", "DynamoDB", "SQS", "S3", "CloudWatch", "Docker", "GitHub Actions", "Git", "Maven"],
+  languages: ["Golang", "Java", "Python", "TypeScript", "JavaScript", "C++", "SQL"],
+  frameworks: ["React", "Spring Boot", "NestJS", "Next.js", "FastAPI", "Gin", "Fiber"],
+  databases: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "DynamoDB"],
+  cloud: ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform"],
+  tools: ["Git", "GraphQL", "REST APIs", "Microservices", "Event-Driven Architecture"],
 };
 
 const AboutSection = () => {
@@ -66,18 +67,19 @@ const AboutSection = () => {
             <motion.div variants={itemVariants} className="space-y-6">
               <div className="gradient-border p-6 rounded-2xl">
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  I'm a <span className="text-foreground font-medium">Software Engineer</span> pursuing 
-                  my M.S. in Computer Science at{" "}
-                  <span className="text-cyan">University at Buffalo</span>. With 2.5+ years of industry 
-                  experience, I specialize in building scalable backend systems and high-performance APIs.
+                  I'm a <span className="text-foreground font-medium">Full Stack Engineer</span> with 
+                  over 2 years of experience building scalable applications. Currently at{" "}
+                  <span className="text-cyan">Valmar Merchant Services</span>, I specialize in 
+                  designing and implementing robust backend systems using Golang and modern frameworks.
                 </p>
               </div>
 
               <div className="gradient-border p-6 rounded-2xl">
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  My expertise spans <span className="text-purple">Golang, Java, and Python</span> with 
-                  strong experience in <span className="text-pink">AWS cloud services</span>. I've 
-                  optimized systems to handle 13x scale increases and reduced API latency by 85%.
+                  My expertise spans across <span className="text-purple">microservices architecture</span>,{" "}
+                  <span className="text-pink">cloud infrastructure</span>, and building 
+                  high-performance APIs. I'm passionate about clean code, system design, and 
+                  creating solutions that make a real impact.
                 </p>
               </div>
 
