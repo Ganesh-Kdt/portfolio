@@ -475,25 +475,13 @@ const HeroSection = () => {
                   transition={{ duration: 2, repeat: Infinity }}
                 />
                 
-                {/* Outer ring */}
+                {/* Arrow icon */}
                 <motion.div
-                  className="w-12 h-12 rounded-full border-2 border-muted-foreground/30 group-hover:border-cyan/50 flex items-center justify-center transition-colors duration-300"
-                  animate={{ 
-                    boxShadow: [
-                      "0 0 0 0 hsl(var(--cyan) / 0)",
-                      "0 0 0 8px hsl(var(--cyan) / 0.1)",
-                      "0 0 0 0 hsl(var(--cyan) / 0)"
-                    ]
-                  }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  className="w-12 h-12 flex items-center justify-center"
+                  animate={{ y: [0, 4, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  {/* Arrow icon */}
-                  <motion.div
-                    animate={{ y: [0, 4, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                  >
-                    <ChevronDown className="w-6 h-6 text-muted-foreground group-hover:text-cyan transition-colors duration-300" />
-                  </motion.div>
+                  <ChevronDown className="w-6 h-6 text-muted-foreground group-hover:text-cyan transition-colors duration-300" />
                 </motion.div>
               </motion.button>
             </motion.div>
