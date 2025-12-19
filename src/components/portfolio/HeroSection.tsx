@@ -424,9 +424,9 @@ const HeroSection = () => {
               className="flex justify-center gap-4 mb-12"
             >
               {[
-                { href: "https://github.com/ganeshkudtarkar", icon: Github, color: "cyan" },
-                { href: "https://linkedin.com/in/ganeshkudtarkar", icon: Linkedin, color: "purple" },
-                { href: "mailto:ganesh.kudtarkar@gmail.com", icon: Mail, color: "pink" },
+                { href: "https://github.com/ganeshkudtarkar", icon: Github, hoverClass: "hover:border-cyan hover:glow-cyan" },
+                { href: "https://linkedin.com/in/ganeshkudtarkar", icon: Linkedin, hoverClass: "hover:border-purple hover:glow-purple" },
+                { href: "mailto:ganesh.kudtarkar@gmail.com", icon: Mail, hoverClass: "hover:border-pink hover:glow-pink" },
               ].map((social, i) => (
                 <motion.a
                   key={social.href}
@@ -443,7 +443,7 @@ const HeroSection = () => {
                   }}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`p-3 rounded-full bg-muted/50 border border-border hover:border-${social.color} hover:glow-${social.color} transition-all duration-300`}
+                  className={`p-3 rounded-full bg-muted/50 border border-border ${social.hoverClass} transition-all duration-300`}
                 >
                   <social.icon className="w-6 h-6" />
                 </motion.a>
