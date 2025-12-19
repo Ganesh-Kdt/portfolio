@@ -119,6 +119,10 @@
     box-shadow: 0 0 20px hsl(var(--purple) / 0.3), 0 0 40px hsl(var(--purple) / 0.1);
   }
 
+  .glow-pink {
+    box-shadow: 0 0 20px hsl(var(--pink) / 0.3), 0 0 40px hsl(var(--pink) / 0.1);
+  }
+
   .text-glow {
     text-shadow: 0 0 20px hsl(var(--cyan) / 0.5);
   }
