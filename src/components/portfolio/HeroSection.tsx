@@ -407,7 +407,7 @@ const HeroSection = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 2.2 + i * 0.15 }}
                   whileHover={{ y: -4, scale: 1.02 }}
-                  className={`group p-6 rounded-xl bg-muted/30 border border-border/50 hover:border-${feature.color}/50 backdrop-blur-sm transition-all duration-300 flex flex-col items-center text-center`}
+                  className={`group p-6 rounded-xl bg-muted/30 border border-border/50 hover:border-${feature.color}/50 hover:glow-${feature.color} backdrop-blur-sm transition-all duration-300 flex flex-col items-center text-center`}
                 >
                   <div className={`w-12 h-12 rounded-xl bg-${feature.color}/10 flex items-center justify-center mb-4 group-hover:bg-${feature.color}/20 transition-colors`}>
                     <feature.icon className={`w-5 h-5 text-${feature.color}`} />
@@ -424,9 +424,9 @@ const HeroSection = () => {
               className="flex justify-center gap-4 mb-12"
             >
               {[
-                { href: "https://github.com/ganeshkudtarkar", icon: Github, color: "cyan", glow: "glow-cyan" },
-                { href: "https://linkedin.com/in/ganeshkudtarkar", icon: Linkedin, color: "purple", glow: "glow-purple" },
-                { href: "mailto:ganesh.kudtarkar@gmail.com", icon: Mail, color: "pink", glow: "" },
+                { href: "https://github.com/ganeshkudtarkar", icon: Github, color: "cyan" },
+                { href: "https://linkedin.com/in/ganeshkudtarkar", icon: Linkedin, color: "purple" },
+                { href: "mailto:ganesh.kudtarkar@gmail.com", icon: Mail, color: "pink" },
               ].map((social, i) => (
                 <motion.a
                   key={social.href}
@@ -443,7 +443,7 @@ const HeroSection = () => {
                   }}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`p-3 rounded-full bg-muted/50 border border-border hover:border-${social.color} ${social.glow ? `hover:${social.glow}` : "hover:shadow-[0_0_20px_hsl(330_80%_65%/0.3)]"} transition-all duration-300`}
+                  className={`p-3 rounded-full bg-muted/50 border border-border hover:border-${social.color} hover:glow-${social.color} transition-all duration-300`}
                 >
                   <social.icon className="w-6 h-6" />
                 </motion.a>
