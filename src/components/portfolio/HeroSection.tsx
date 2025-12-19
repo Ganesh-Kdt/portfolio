@@ -401,19 +401,21 @@ const HeroSection = () => {
                 { icon: Server, title: "Backend Architecture", description: "Scalable system design", color: "purple" },
                 { icon: Cloud, title: "Cloud Computing", description: "AWS & cloud-native solutions", color: "pink" },
               ].map((feature, i) => (
-                <motion.div
+              <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 2.2 + i * 0.15 }}
                   whileHover={{ y: -4, scale: 1.02 }}
-                  className={`group p-5 rounded-xl bg-muted/30 border border-border/50 hover:border-${feature.color}/50 backdrop-blur-sm transition-all duration-300`}
+                  className={`group p-5 rounded-xl bg-muted/30 border border-border/50 hover:border-${feature.color}/50 backdrop-blur-sm transition-all duration-300 flex items-center gap-4`}
                 >
-                  <div className={`w-10 h-10 rounded-lg bg-${feature.color}/10 flex items-center justify-center mb-3 group-hover:bg-${feature.color}/20 transition-colors`}>
+                  <div className={`w-12 h-12 rounded-xl bg-${feature.color}/10 flex items-center justify-center shrink-0 group-hover:bg-${feature.color}/20 transition-colors`}>
                     <feature.icon className={`w-5 h-5 text-${feature.color}`} />
                   </div>
-                  <h3 className="font-semibold text-foreground mb-1">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  <div className="text-left">
+                    <h3 className="font-semibold text-foreground">{feature.title}</h3>
+                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
