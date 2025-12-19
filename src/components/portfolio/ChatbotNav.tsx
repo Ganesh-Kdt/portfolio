@@ -78,14 +78,23 @@ const ChatbotNav = () => {
   return (
     <div className="fixed bottom-6 right-6 z-[9999]">
       {/* Floating button - hidden when chat is open */}
-      {!isOpen && (
-        <button
-          onClick={() => setIsOpen(true)}
-          className="relative p-4 rounded-full bg-gradient-to-r from-cyan via-purple to-pink text-primary-foreground shadow-lg glow-cyan transition-transform duration-200 hover:scale-110 active:scale-95"
-        >
-          <Navigation className="w-6 h-6" />
-        </button>
-      )}
+      <AnimatePresence mode="wait">
+        {!isOpen && (
+          <motion.button
+            key="nav-button"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setIsOpen(true)}
+            className="relative p-4 rounded-full bg-gradient-to-r from-cyan via-purple to-pink text-primary-foreground shadow-lg glow-cyan"
+          >
+            <Navigation className="w-6 h-6" />
+          </motion.button>
+        )}
+      </AnimatePresence>
 
       {/* Chat window */}
       <AnimatePresence>
