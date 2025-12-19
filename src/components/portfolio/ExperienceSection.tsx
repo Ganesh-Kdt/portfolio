@@ -57,7 +57,7 @@ const ExperienceCard = ({
   experience: (typeof experiences)[0];
   index: number;
 }) => {
-  const [isExpanded, setIsExpanded] = useState(index === 0);
+  const [isExpanded, setIsExpanded] = useState(index <= 2);
   const cardRef = useRef(null);
   const isInView = useInView(cardRef, { once: true, margin: "-50px" });
 
