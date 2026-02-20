@@ -355,9 +355,16 @@ const HeroSection = () => {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.6, delay: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
-                className="text-2xl md:text-3xl text-muted-foreground inline-block"
+                className="text-2xl md:text-3xl inline-block font-heading tracking-wide"
+                style={{
+                  background: "linear-gradient(90deg, hsl(var(--muted-foreground)), hsl(var(--foreground)), hsl(var(--cyan)), hsl(var(--purple)), hsl(var(--pink)))",
+                  backgroundSize: "300% 100%",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  animation: "gradient-shift 6s ease infinite",
+                }}
               >
-                Software Engineer • <span className="text-amber">AI & Cloud</span>
+                Software Engineer • AI & Cloud
               </motion.span>
             </motion.div>
 
