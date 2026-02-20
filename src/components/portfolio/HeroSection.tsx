@@ -355,9 +355,16 @@ const HeroSection = () => {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.6, delay: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
-                className="text-2xl md:text-3xl text-muted-foreground inline-block"
+                className="text-2xl md:text-3xl inline-block font-heading tracking-wide"
+                style={{
+                  background: "linear-gradient(90deg, hsl(var(--muted-foreground)), hsl(var(--foreground)), hsl(var(--cyan)), hsl(var(--purple)), hsl(var(--pink)))",
+                  backgroundSize: "300% 100%",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  animation: "gradient-shift 6s ease infinite",
+                }}
               >
-                Full Stack Engineer
+                Software Engineer • AI & Cloud
               </motion.span>
             </motion.div>
 
@@ -377,7 +384,7 @@ const HeroSection = () => {
                   {word}
                 </motion.span>
               ))} */}
-              {"I write clean code and build backend systems that don't crash when you need them most. I love to turn sluggish, minute-long processes into snappy, sub-second operations in production. When I’m not staring at terminal windows or AWS consoles, you will find me on a soccer field or running trails."
+              {"I write clean code and build backend systems that don't crash when you need them most. I love to turn sluggish processes into snappy, sub-second operations in production. When I’m not staring at terminal windows or AWS consoles, you will find me on a soccer field or running trails."
                 .split(" ")
                 .map((word, i) => (
                   <motion.span
@@ -386,14 +393,14 @@ const HeroSection = () => {
                     animate={{ opacity: 1, y: 0 }}
                     // Note: With a longer text, you might want to slightly decrease the delay multiplier (e.g., from 0.08 to 0.03) 
                     // so the animation doesn't take too long to finish, but that's totally up to your preference!
-                    transition={{ duration: 0.4, delay: 1.2 + i * 0.08 }} 
+                    transition={{ duration: 0.4, delay: 1.2 + i * 0.04 }} 
                     className="inline-block mr-2"
                   >
                     {word}
                   </motion.span>
                 ))}
-              <br className="hidden md:block" />
-              {["Passionate", "about", "backend", "architecture,", "cloud", "computing,", "and", "creating", "seamless", "user", "experiences."].map((word, i) => (
+              {/* <br className="hidden md:block" /> */}
+              {/* {["Passionate", "about", "backend", "architecture,", "cloud", "computing,", "and", "creating", "seamless", "user", "experiences."].map((word, i) => (
                 <motion.span
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
@@ -403,18 +410,18 @@ const HeroSection = () => {
                 >
                   {word}
                 </motion.span>
-              ))}
+              ))} */}
             </motion.div>
 
             {/* Feature highlight cards */}
             <motion.div
               variants={itemVariants}
-              className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-10"
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10"
             >
               {[
-                { icon: Code2, title: "Clean Code", description: "Writing maintainable & efficient code", color: "cyan" },
-                { icon: Server, title: "Backend Architecture", description: "Scalable system design", color: "purple" },
-                { icon: Cloud, title: "Cloud Computing", description: "AWS & cloud-native solutions", color: "pink" },
+                { icon: Code2, title: "Clean Code", description: "Write code that other developers actually want to read", color: "cyan" },
+                { icon: Server, title: "Backend Architecture", description: "Build engines that keep high-traffic platforms running smoothly", color: "purple" },
+                { icon: Cloud, title: "Cloud Computing", description: "Create secure AWS environments from scratch to get features from prototype into production.", color: "pink" },
               ].map((feature, i) => (
               <motion.div
                   key={feature.title}
