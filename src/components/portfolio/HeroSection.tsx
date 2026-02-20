@@ -357,7 +357,7 @@ const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
                 className="text-2xl md:text-3xl text-muted-foreground inline-block"
               >
-                Full Stack Engineer
+                Software Engineer · <span className="text-cyan">AI</span> & <span className="text-purple">Cloud</span>
               </motion.span>
             </motion.div>
 
