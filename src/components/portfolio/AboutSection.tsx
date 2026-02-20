@@ -67,7 +67,7 @@ const AboutSection = () => {
             <motion.div variants={itemVariants} className="space-y-6">
               <div className="gradient-border p-6 rounded-2xl">
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  I'm a <span className="text-foreground font-medium">Full Stack Engineer</span> with 
+                  I'm a <span className="text-foreground font-medium">Software Engineer</span> · <span className="text-purple font-medium">AI</span> & <span className="text-cyan font-medium">Cloud</span> with 
                   over 2 years of experience building scalable applications. Currently at{" "}
                   <span className="text-cyan">Valmar Merchant Services</span>, I specialize in 
                   designing and implementing robust backend systems using Golang and modern frameworks.
