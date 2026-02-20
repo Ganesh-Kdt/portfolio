@@ -300,7 +300,7 @@ const HeroSection = () => {
               variants={itemVariants}
               className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8"
             >
-              {["Building", "scalable,", "efficient,", "and", "innovative", "solutions", "with", "modern", "technologies."].map((word, i) => (
+              {/* {["Building", "scalable,", "efficient,", "and", "innovative", "solutions", "with", "modern", "technologies."].map((word, i) => (
                 <motion.span
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
@@ -310,7 +310,22 @@ const HeroSection = () => {
                 >
                   {word}
                 </motion.span>
-              ))}
+              ))} */}
+              {"I write clean code and build backend systems that don't crash when you need them most. I love to turn sluggish, minute-long processes into snappy, sub-second operations in production. When I’m not staring at terminal windows or AWS consoles, you will find me on a soccer field or running trails."
+                .split(" ")
+                .map((word, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    // Note: With a longer text, you might want to slightly decrease the delay multiplier (e.g., from 0.08 to 0.03) 
+                    // so the animation doesn't take too long to finish, but that's totally up to your preference!
+                    transition={{ duration: 0.4, delay: 1.2 + i * 0.08 }} 
+                    className="inline-block mr-2"
+                  >
+                    {word}
+                  </motion.span>
+                ))}
               <br className="hidden md:block" />
               {["Passionate", "about", "backend", "architecture,", "cloud", "computing,", "and", "creating", "seamless", "user", "experiences."].map((word, i) => (
                 <motion.span
