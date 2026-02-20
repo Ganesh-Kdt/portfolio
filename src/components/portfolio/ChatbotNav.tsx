@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { MessageCircle, X, User, Briefcase, FolderOpen, GraduationCap, Award, Mail, Home } from "lucide-react";
+import { X, User, Briefcase, FolderOpen, GraduationCap, Award, Mail, Home, Navigation } from "lucide-react";
 
 const navItems = [
   { id: "hero", label: "Home", icon: Home },
@@ -34,11 +34,28 @@ const ThinkingDots = () => (
 
 const ChatbotNav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isChatVisible, setIsChatVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
   const [isThinking, setIsThinking] = useState(false);
   const [messages, setMessages] = useState<
     { type: "bot" | "user"; content: string }[]
   >([{ type: "bot", content: "Hi! Where would you like to go?" }]);
+
+  const handleOpen = () => {
+    setIsChatVisible(true);
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  const handleExitComplete = () => {
+    setIsChatVisible(false);
+    // Reset messages after exit animation completes
+    setMessages([{ type: "bot", content: "Hi! Where would you like to go?" }]);
+    setSelectedItem(null);
+  };
 
   const handleNavClick = async (id: string, label: string) => {
     // Add user message
@@ -66,36 +83,33 @@ const ChatbotNav = () => {
 
     // Close chat after navigation
     setTimeout(() => {
-      setIsOpen(false);
-      // Reset messages after close animation
-      setTimeout(() => {
-        setMessages([{ type: "bot", content: "Hi! Where would you like to go?" }]);
-        setSelectedItem(null);
-      }, 300);
+      handleClose();
     }, 500);
   };
 
   return (
     <div className="fixed bottom-6 right-6 z-[9999]">
-      {/* Floating button */}
-      <motion.button
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 1, type: "spring", stiffness: 200 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setIsOpen(!isOpen)}
-        className="p-4 rounded-full bg-gradient-to-r from-cyan via-purple to-pink text-primary-foreground shadow-lg glow-cyan"
-      >
-        {isOpen ? (
-          <X className="w-6 h-6" />
-        ) : (
-          <MessageCircle className="w-6 h-6" />
+      {/* Floating button - hidden when chat is visible (including during animation) */}
+      <AnimatePresence mode="wait">
+        {!isChatVisible && (
+          <motion.button
+            key="nav-button"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={handleOpen}
+            className="relative p-4 rounded-full bg-gradient-to-r from-cyan via-purple to-pink text-primary-foreground shadow-lg glow-cyan"
+          >
+            <Navigation className="w-6 h-6" />
+          </motion.button>
         )}
-      </motion.button>
+      </AnimatePresence>
 
       {/* Chat window */}
-      <AnimatePresence>
+      <AnimatePresence onExitComplete={handleExitComplete}>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -109,18 +123,18 @@ const ChatbotNav = () => {
               <div className="p-4 border-b border-border bg-gradient-to-r from-cyan/10 via-purple/10 to-pink/10">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-r from-cyan to-purple flex items-center justify-center">
-                    <span className="text-lg">🤖</span>
+                    <Navigation className="w-5 h-5 text-primary-foreground" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-sm">Navigation Bot</h3>
+                    <h3 className="font-bold text-sm">Quick Nav</h3>
                     <p className="text-xs text-muted-foreground">
-                      Always here to help
+                      Jump to any section
                     </p>
                   </div>
                   <div className="ml-auto flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                     <button
-                      onClick={() => setIsOpen(false)}
+                      onClick={handleClose}
                       className="p-1 rounded-full hover:bg-muted transition-colors"
                       aria-label="Close chat"
                     >

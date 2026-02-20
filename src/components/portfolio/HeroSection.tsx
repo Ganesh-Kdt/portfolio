@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import { Github, Linkedin, Mail, ChevronDown, Code2, Server, Cloud } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
@@ -74,8 +74,72 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden noise-bg"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{ background: "hsl(225 50% 3%)" }}
     >
+      {/* Tech grid pattern */}
+      <div 
+        className="absolute inset-0 opacity-[0.15]"
+        style={{
+          backgroundImage: `
+            linear-gradient(hsl(var(--cyan) / 0.3) 1px, transparent 1px),
+            linear-gradient(90deg, hsl(var(--cyan) / 0.3) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px',
+        }}
+      />
+      
+      {/* Animated tech dots - very subtle */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(25)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full bg-foreground/[0.03]"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              width: `${0.5 + Math.random() * 1}px`,
+              height: `${0.5 + Math.random() * 1}px`,
+            }}
+            animate={{
+              opacity: [0.02, 0.06, 0.02],
+            }}
+            transition={{
+              duration: 6 + Math.random() * 4,
+              repeat: Infinity,
+              delay: Math.random() * 4,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Gradient glow spots */}
+      <motion.div
+        className="absolute top-1/4 -left-20 w-80 h-80 rounded-full opacity-20 blur-3xl"
+        style={{ background: "hsl(var(--cyan))" }}
+        animate={{ 
+          scale: [1, 1.2, 1],
+          opacity: [0.15, 0.25, 0.15],
+        }}
+        transition={{ duration: 8, repeat: Infinity }}
+      />
+      <motion.div
+        className="absolute bottom-1/4 -right-20 w-96 h-96 rounded-full opacity-15 blur-3xl"
+        style={{ background: "hsl(var(--pink))" }}
+        animate={{ 
+          scale: [1.2, 1, 1.2],
+          opacity: [0.1, 0.2, 0.1],
+        }}
+        transition={{ duration: 10, repeat: Infinity }}
+      />
+
+      {/* Subtle scanlines */}
+      <div 
+        className="absolute inset-0 pointer-events-none opacity-[0.03]"
+        style={{
+          background: 'repeating-linear-gradient(0deg, transparent, transparent 2px, hsl(var(--foreground)) 2px, hsl(var(--foreground)) 3px)',
+        }}
+      />
       {/* Loading overlay */}
       <AnimatePresence>
         {isLoading && (
@@ -90,31 +154,47 @@ const HeroSection = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 1.5, opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="relative"
+              className="relative flex flex-col items-center gap-6"
             >
-              {/* Animated logo/loader */}
+              {/* Modern gradient spinner */}
+              <div className="relative w-16 h-16">
+                <motion.div
+                  className="absolute inset-0 rounded-full"
+                  style={{
+                    background: "conic-gradient(from 0deg, transparent, hsl(var(--cyan)), hsl(var(--purple)), hsl(var(--pink)), transparent)",
+                  }}
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+                />
+                <div className="absolute inset-1 rounded-full bg-background" />
+                <motion.div
+                  className="absolute inset-0 rounded-full"
+                  style={{
+                    background: "conic-gradient(from 180deg, transparent, hsl(var(--pink)), hsl(var(--purple)), hsl(var(--cyan)), transparent)",
+                  }}
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                />
+                <div className="absolute inset-2 rounded-full bg-background" />
+              </div>
+              
+              {/* Loading text */}
               <motion.div
-                className="w-20 h-20 rounded-full border-2 border-cyan"
-                animate={{ 
-                  rotate: 360,
-                  borderColor: ["hsl(var(--cyan))", "hsl(var(--purple))", "hsl(var(--pink))", "hsl(var(--cyan))"]
-                }}
-                transition={{ 
-                  rotate: { duration: 2, repeat: Infinity, ease: "linear" },
-                  borderColor: { duration: 2, repeat: Infinity }
-                }}
-              />
-              <motion.div
-                className="absolute inset-0 w-20 h-20 rounded-full border-2 border-purple/50"
-                animate={{ rotate: -360 }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-              />
-              <motion.div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl"
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity }}
+                className="flex gap-1"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
               >
-                💻
+                {["L", "o", "a", "d", "i", "n", "g"].map((letter, i) => (
+                  <motion.span
+                    key={i}
+                    className="text-sm font-mono gradient-text"
+                    animate={{ opacity: [0.3, 1, 0.3] }}
+                    transition={{ duration: 1.2, repeat: Infinity, delay: i * 0.1 }}
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
               </motion.div>
             </motion.div>
           </motion.div>
@@ -244,26 +324,12 @@ const HeroSection = () => {
               </motion.p>
             </motion.div>
 
-            {/* Profile photo with dramatic entrance */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0, rotate: -180 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 100 }}
-              className="w-32 h-32 mx-auto mb-8 rounded-full gradient-border overflow-hidden"
-            >
-              <motion.div 
-                className="w-full h-full bg-muted flex items-center justify-center text-4xl"
-                whileHover={{ scale: 1.1 }}
-              >
-                👨‍💻
-              </motion.div>
-            </motion.div>
 
-            {/* Name with 3D letter animation */}
+            {/* Name with clean modern typography */}
             <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-4 perspective-1000"
+              className="text-5xl md:text-7xl font-semibold mb-4 perspective-1000 tracking-tight"
             >
-              <span className="gradient-text inline-flex overflow-hidden">
+              <span className="inline-flex overflow-hidden">
                 {name.split("").map((letter, i) => (
                   <motion.span
                     key={i}
@@ -271,7 +337,7 @@ const HeroSection = () => {
                     variants={letterVariants}
                     initial="hidden"
                     animate="visible"
-                    className="inline-block"
+                    className="inline-block gradient-text"
                     style={{ transformStyle: "preserve-3d" }}
                   >
                     {letter === " " ? "\u00A0" : letter}
@@ -340,15 +406,42 @@ const HeroSection = () => {
               ))}
             </motion.div>
 
+            {/* Feature highlight cards */}
+            <motion.div
+              variants={itemVariants}
+              className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-10"
+            >
+              {[
+                { icon: Code2, title: "Clean Code", description: "Writing maintainable & efficient code", color: "cyan" },
+                { icon: Server, title: "Backend Architecture", description: "Scalable system design", color: "purple" },
+                { icon: Cloud, title: "Cloud Computing", description: "AWS & cloud-native solutions", color: "pink" },
+              ].map((feature, i) => (
+              <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 2.2 + i * 0.15 }}
+                  whileHover={{ y: -4, scale: 1.02 }}
+                  className={`group p-6 rounded-xl bg-muted/30 border border-border/50 hover:border-${feature.color}/50 hover:glow-${feature.color} backdrop-blur-sm transition-all duration-300 flex flex-col items-center text-center`}
+                >
+                  <div className={`w-12 h-12 rounded-xl bg-${feature.color}/10 flex items-center justify-center mb-4 group-hover:bg-${feature.color}/20 transition-colors`}>
+                    <feature.icon className={`w-5 h-5 text-${feature.color}`} />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground">{feature.description}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+
             {/* Social links with staggered pop-in */}
             <motion.div
               variants={itemVariants}
               className="flex justify-center gap-4 mb-12"
             >
               {[
-                { href: "https://github.com/ganeshkudtarkar", icon: Github, color: "cyan", glow: "glow-cyan" },
-                { href: "https://linkedin.com/in/ganeshkudtarkar", icon: Linkedin, color: "purple", glow: "glow-purple" },
-                { href: "mailto:ganesh.kudtarkar@gmail.com", icon: Mail, color: "pink", glow: "" },
+                { href: "https://github.com/ganeshkudtarkar", icon: Github, hoverClass: "hover:border-cyan hover:glow-cyan" },
+                { href: "https://linkedin.com/in/ganeshkudtarkar", icon: Linkedin, hoverClass: "hover:border-purple hover:glow-purple" },
+                { href: "mailto:ganesh.kudtarkar@gmail.com", icon: Mail, hoverClass: "hover:border-pink hover:glow-pink" },
               ].map((social, i) => (
                 <motion.a
                   key={social.href}
@@ -365,40 +458,13 @@ const HeroSection = () => {
                   }}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`p-3 rounded-full bg-muted/50 border border-border hover:border-${social.color} ${social.glow ? `hover:${social.glow}` : "hover:shadow-[0_0_20px_hsl(330_80%_65%/0.3)]"} transition-all duration-300`}
+                  className={`p-3 rounded-full bg-muted/50 border border-border ${social.hoverClass} transition-all duration-300`}
                 >
                   <social.icon className="w-6 h-6" />
                 </motion.a>
               ))}
             </motion.div>
 
-            {/* CTA Button with dramatic entrance */}
-            <motion.div
-              initial={{ opacity: 0, y: 50, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.6, delay: 2.8, type: "spring" }}
-              className="mb-24"
-            >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-cyan via-purple to-pink text-primary-foreground font-semibold px-8 py-6 text-lg rounded-full hover:opacity-90 transition-opacity relative overflow-hidden group"
-                  onClick={() =>
-                    document
-                      .getElementById("about")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
-                >
-                  <motion.span
-                    className="absolute inset-0 bg-gradient-to-r from-pink via-purple to-cyan opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  />
-                  <span className="relative z-10">Explore My Work</span>
-                </Button>
-              </motion.div>
-            </motion.div>
 
             {/* Scroll indicator arrow */}
             <motion.div
@@ -413,36 +479,20 @@ const HeroSection = () => {
                     .getElementById("about")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="relative group cursor-pointer"
+                className="relative group cursor-pointer outline-none border-none bg-transparent"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                {/* Glow ring */}
-                <motion.div
-                  className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan via-purple to-pink opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                />
+                {/* Glow effect */}
+                <div className="absolute inset-0 w-12 h-12 rounded-full bg-gradient-to-r from-cyan via-purple to-pink opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500" />
                 
-                {/* Outer ring */}
+                {/* Arrow icon */}
                 <motion.div
-                  className="w-12 h-12 rounded-full border-2 border-muted-foreground/30 group-hover:border-cyan/50 flex items-center justify-center transition-colors duration-300"
-                  animate={{ 
-                    boxShadow: [
-                      "0 0 0 0 hsl(var(--cyan) / 0)",
-                      "0 0 0 8px hsl(var(--cyan) / 0.1)",
-                      "0 0 0 0 hsl(var(--cyan) / 0)"
-                    ]
-                  }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  className="w-12 h-12 flex items-center justify-center relative"
+                  animate={{ y: [0, 4, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  {/* Arrow icon */}
-                  <motion.div
-                    animate={{ y: [0, 4, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                  >
-                    <ChevronDown className="w-6 h-6 text-muted-foreground group-hover:text-cyan transition-colors duration-300" />
-                  </motion.div>
+                  <ChevronDown className="w-6 h-6 text-muted-foreground group-hover:text-cyan transition-colors duration-300" />
                 </motion.div>
               </motion.button>
             </motion.div>
