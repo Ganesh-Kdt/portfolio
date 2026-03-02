@@ -75,7 +75,7 @@ const AboutSection = () => {
               <div className="gradient-border p-6 rounded-2xl">
                 <p className="text-muted-foreground text-lg leading-relaxed">
                 I don't just write backend code I build the <span className="text-purple">cloud infrastructure</span> it lives on.
-                Building <span className="text-pink">event-driven pipelines</span> with EventBridge and DynamoDB, and configuring EC2 environments from scratch.
+                Building <span className="text-pink">event-driven pipelines</span> with AWS Lambda and DynamoDB, and configuring EC2 environments from scratch.
                 Lately I've been diving deep into Terraform to automate deployments and design systems that basically run themselves.</p>
               </div>
 

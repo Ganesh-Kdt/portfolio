@@ -4,15 +4,27 @@ import { GraduationCap, Calendar, MapPin } from "lucide-react";
 
 const education = [
   {
+    institution: "University at Buffalo",
+    degree: "Master of Science",
+    field: "Computer Science",
+    period: "Aug 2024 - Dec 2025",
+    location: "Buffalo, NY",
+    highlights: [
+      "Mastered low-level OS and CPU architecture focusing on multi-threading, process management, and concurrency control using mutexes and semaphores.",
+      "Deep dived into the under-the-hood mechanics of Database Systems and Data Intensive Computing, specializing in advanced query optimization.",
+      "Engineered machine learning models and custom neural networks entirely from scratch, implementing core optimization algorithms rather than just relying on abstraction libraries.",
+    ],
+  },
+  {
     institution: "University of Mumbai",
     degree: "Bachelor of Engineering",
-    field: "Electronics and Telecommunications",
-    period: "2019 - 2023",
+    field: "Electronics and Telecommunication",
+    period: "Aug 2016 - Oct 2020",
     location: "Mumbai, India",
     highlights: [
-      "Focused on signal processing and embedded systems",
-      "Completed capstone project on IoT-based smart systems",
-      "Active member of technical clubs and coding communities",
+      "Built a strong foundation in computational logic and system design through embedded systems engineering.",
+      "Programmed and deployed software for IoT-based smart systems as part of a comprehensive capstone project.",
+      "Served on the university hiring committee, directly partnering with visiting companies to orchestrate and execute seamless on-campus recruitment events.",
     ],
   },
 ];
@@ -61,7 +73,7 @@ const EducationSection = () => {
           </motion.div>
 
           {/* Education cards */}
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto flex flex-col gap-8">
             {education.map((edu, index) => (
               <motion.div
                 key={index}

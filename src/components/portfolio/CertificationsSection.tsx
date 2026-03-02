@@ -4,20 +4,20 @@ import { Award, ExternalLink, Calendar } from "lucide-react";
 
 const certifications = [
   {
-    name: "Kubernetes for the Absolute Beginners",
-    issuer: "KodeKloud",
-    date: "2024",
-    description: "Container orchestration, deployments, services, and scaling",
+    name: "Microsoft Certified: Azure AI Fundamentals",
+    issuer: "Microsoft",
+    date: "2025",
+    description: "Demonstrated expertise in cloud-based AI workloads focusing on Azure AI Foundry, and integrating AI models into scalable enterprise infrastructure.",
     color: "cyan",
-    icon: "☸️",
+    icon: "☁️",
   },
   {
-    name: "AWS Cloud Practitioner Essentials",
-    issuer: "Amazon Web Services",
+    name: "Machine Learning Specialization",
+    issuer: "Coursera (DeepLearning.AI)",
     date: "2023",
-    description: "Cloud computing fundamentals, AWS services, and best practices",
+    description: "Comprehensive specialization covering supervised learning, unsupervised learning, and recommendation systems using Python.",
     color: "purple",
-    icon: "☁️",
+    icon: "📈",
   },
 ];
 
@@ -137,14 +137,14 @@ const CertificationsSection = () => {
           </div>
 
           {/* Add more placeholder */}
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.8 }}
             className="text-center text-muted-foreground text-sm mt-8"
           >
-            More certifications coming soon...
-          </motion.p>
+          //   More certifications coming soon...
+          </motion.p> */}
         </motion.div>
       </div>
     </section>
