@@ -3,11 +3,11 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const skills = {
-  languages: ["Golang", "Java", "Python", "TypeScript", "JavaScript", "C++", "SQL"],
-  frameworks: ["React", "Spring Boot", "NestJS", "Next.js", "FastAPI", "Gin", "Fiber"],
-  databases: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "DynamoDB"],
+  languages: ["Golang", "Java", "Python", "TypeScript", "JavaScript"],
+  frameworks: ["React", "Spring Boot", "NestJS", "Next.js", "FastAPI"],
+  databases: ["PostgreSQL", "MySQL", "Redis", "DynamoDB"],
   cloud: ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform"],
-  tools: ["Git", "GraphQL", "REST APIs", "Microservices", "Event-Driven Architecture"],
+  tools: ["Git", "REST APIs", "Microservices", "Event-Driven Architecture"],
 };
 
 const AboutSection = () => {
@@ -67,26 +67,21 @@ const AboutSection = () => {
             <motion.div variants={itemVariants} className="space-y-6">
               <div className="gradient-border p-6 rounded-2xl">
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  I'm a <span className="text-foreground font-medium">Full Stack Engineer</span> with 
-                  over 2 years of experience building scalable applications. Currently at{" "}
-                  <span className="text-cyan">Valmar Merchant Services</span>, I specialize in 
-                  designing and implementing robust backend systems using Golang and modern frameworks.
-                </p>
+                  I'm a <span className="text-cyan">Software Engineer</span> with over 3 years of full-time experience building backend systems,
+                  my work spans everything from enterprise Java Spring Boot microservices to high-throughput Golang transaction pipelines.
+                  </p>
               </div>
 
               <div className="gradient-border p-6 rounded-2xl">
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  My expertise spans across <span className="text-purple">microservices architecture</span>,{" "}
-                  <span className="text-pink">cloud infrastructure</span>, and building 
-                  high-performance APIs. I'm passionate about clean code, system design, and 
-                  creating solutions that make a real impact.
-                </p>
+                I don't just write backend code I build the <span className="text-purple">cloud infrastructure</span> it lives on.
+                Building <span className="text-pink">event-driven pipelines</span> with EventBridge and DynamoDB, and configuring EC2 environments from scratch.
+                Lately I've been diving deep into Terraform to automate deployments and design systems that basically run themselves.</p>
               </div>
 
               <div className="gradient-border p-6 rounded-2xl">
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  When I'm not coding, you'll find me exploring new technologies, contributing to 
-                  open-source projects, or diving deep into machine learning and AI applications.
+                When my code is finally pushed, my favorite way to unwind? Rewatching Modern Family. Watching Phil Dunphy's chaos is the perfect therapy after a long day of debugging. Sometimes I balance it out by hitting the pavement for a long run.
                 </p>
               </div>
             </motion.div>

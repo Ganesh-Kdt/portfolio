@@ -419,9 +419,9 @@ const HeroSection = () => {
               className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10"
             >
               {[
-                { icon: Code2, title: "Clean Code", description: "Write code that other developers actually want to read", color: "cyan" },
-                { icon: Server, title: "Backend Architecture", description: "Build engines that keep high-traffic platforms running smoothly", color: "purple" },
-                { icon: Cloud, title: "Cloud Computing", description: "Create secure AWS environments from scratch to get features from prototype into production.", color: "pink" },
+                { icon: Code2, title: "Clean Code", description: "", color: "cyan" },//When my code is finally pushed, my favorite way to unwind? Rewatching Modern Family. Watching Phil Dunphy's chaos is the perfect therapy after a long day of debugging. Sometimes I balance it out by hitting the pavement for a long run.
+                { icon: Server, title: "Backend Architecture", description: "", color: "purple" },//Build engines that keep high-traffic platforms running smoothly
+                { icon: Cloud, title: "Cloud Computing", description: "", color: "pink" },//Create secure AWS environments from scratch to get features from prototype into production.
               ].map((feature, i) => (
               <motion.div
                   key={feature.title}

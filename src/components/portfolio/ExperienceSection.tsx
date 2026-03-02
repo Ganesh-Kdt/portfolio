@@ -5,48 +5,45 @@ import { Briefcase, Calendar, MapPin, ChevronDown } from "lucide-react";
 const experiences = [
   {
     company: "Valmar Merchant Services",
-    role: "Full Stack Engineer",
-    period: "Apr 2024 - Present",
-    location: "Mumbai, India",
+    role: "Software Engineer Intern",
+    period: "Sep 2025 - Dec 2025",
+    location: "Buffalo, NY",
     description:
-      "Leading development of payment processing systems and merchant services platform.",
+      "Contributed to the core payment processing platform by building high-performance backend pipelines.",
     achievements: [
-      "Architected and implemented microservices handling 1M+ daily transactions",
-      "Built real-time reporting dashboards with sub-second latency",
-      "Reduced system downtime by 40% through improved error handling",
-      "Led migration from monolith to microservices architecture",
+      "Slashed batch processing time to under 300ms for a platform-wide transaction limit reset system by engineering a concurrent 8-worker pool using Golang, DynamoDB, and AWS EventBridge",
+      "Saved 5+ hours of manual testing weekly by integrating Cypress E2E regression suites into GitHub Actions",
+      "Reduced manual processing for recurring payments by building a transaction duplication feature in React"
     ],
-    technologies: ["Golang", "PostgreSQL", "Redis", "AWS", "Docker", "Kubernetes"],
+    technologies: ["Golang", "DynamoDB", "AWS Lambda", "CloudWatch", "Github Actions"],
   },
   {
     company: "Filmic Technologies",
-    role: "Software Engineer",
-    period: "Jun 2023 - Mar 2024",
+    role: "Software Engineer Intern",
+    period: "May 2025 - Aug 2025",
     location: "Remote",
     description:
-      "Developed video streaming and media processing solutions for content creators.",
+      "Built foundational infrastructure to transform an early-stage prototype into a production-ready application.",
     achievements: [
-      "Built video transcoding pipeline processing 500+ hours of content daily",
-      "Implemented CDN optimization reducing load times by 60%",
-      "Developed REST APIs serving 50K+ concurrent users",
-      "Created automated testing framework achieving 85% code coverage",
+      "Developed the platform's first media storage pipeline using AWS S3 and secure REST APIs from scratch",
+      "Built company's first internal pre-production environment on AWS EC2 with Nginx and PM2"
     ],
-    technologies: ["Python", "FastAPI", "AWS Lambda", "DynamoDB", "FFmpeg"],
+    technologies: ["NestJS", "Next.js", "AWS EC2", "AWS S3", "TypeScript"],
   },
   {
     company: "JForce Solutions",
-    role: "Software Developer Intern",
-    period: "Jan 2023 - May 2023",
+    role: "Software Engineer",
+    period: "Oct 2021 - Apr 2024",
     location: "Mumbai, India",
     description:
-      "Contributed to enterprise resource planning and business automation tools.",
+      "Engineered and scaled enterprise backend systems focusing on multithreaded data processing and massive workflow automation.",
     achievements: [
-      "Developed inventory management module used by 100+ businesses",
-      "Optimized database queries reducing response time by 50%",
-      "Implemented role-based access control for multi-tenant system",
-      "Created comprehensive API documentation for external integrations",
+      "Scaled daily order volume by 13x by automating a Java/Spring Boot system that cut manual processing from 10 minutes to under 1 second",
+      "Reduced large file upload times by 85% (10 minutes to 90 seconds) using Java multithreading and JDBC batch updates",
+      "Boosted average user session time by 25% by developing a scalable chat application for 3,000+ users",
+      "Reduced administrative time by over 70% by architecting an automated assessment workflow with React, Spring Boot, and external API webhooks",
     ],
-    technologies: ["Java", "Spring Boot", "MySQL", "React", "TypeScript"],
+    technologies: ["Java", "Spring Boot", "MySQL", "React", "JUnit", "Webhooks"],
   },
 ];
 

@@ -103,14 +103,14 @@ const ContactSection = () => {
                 <h3 className="text-lg font-bold mb-4">Quick Links</h3>
                 <div className="space-y-4">
                   <motion.a
-                    href="mailto:ganesh.kudtarkar@gmail.com"
+                    href="mailto:gkudtarkar8@gmail.com"
                     whileHover={{ x: 5 }}
                     className="flex items-center gap-3 text-muted-foreground hover:text-cyan transition-colors"
                   >
                     <div className="p-2 rounded-lg bg-cyan/10 border border-cyan/30">
                       <Mail className="w-5 h-5 text-cyan" />
                     </div>
-                    <span>ganesh.kudtarkar@gmail.com</span>
+                    <span>gkudtarkar8@gmail.com</span>
                   </motion.a>
                   <motion.a
                     href="https://github.com/ganeshkudtarkar"
