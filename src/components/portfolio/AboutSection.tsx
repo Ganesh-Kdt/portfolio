@@ -3,10 +3,11 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const skills = {
-  languages: ["Golang", "Java", "Python", "TypeScript", "JavaScript"],
-  frameworks: ["React", "Spring Boot", "NestJS", "Next.js", "FastAPI"],
+  languages: ["Golang", "Java", "Python", "TypeScript", "C++"],
+  frameworks: ["React", "Spring Boot", "NestJS", "Next.js", "Django"],
+  cloud: ["AWS", "Docker", "GitHub Actions", "CI/CD", "Terraform"],
+  ai: ["Hugging Face", "Word2Vec", "Random Forest", "NLP"],
   databases: ["PostgreSQL", "MySQL", "Redis", "DynamoDB"],
-  cloud: ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform"],
   tools: ["Git", "REST APIs", "Microservices", "Event-Driven Architecture"],
 };
 
@@ -62,35 +63,34 @@ const AboutSection = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-cyan to-purple mx-auto rounded-full" />
           </motion.div>
 
+          {/* Moved Section Header OUT of the grid so it stays centered properly */}
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Bio */}
+            
+            {/* Left Column: Bio */}
             <motion.div variants={itemVariants} className="space-y-6">
               <div className="gradient-border p-6 rounded-2xl">
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  I'm a <span className="text-cyan">Software Engineer</span> with over 3 years of full-time experience building backend systems,
-                  my work spans everything from enterprise Java Spring Boot microservices to high-throughput Golang transaction pipelines.
-                  </p>
+                  I'm a Software Engineer with over 3 years of full-time experience building backend systems. My work spans everything from enterprise Java Spring Boot microservices to high-throughput Golang transaction pipelines.
+                </p>
               </div>
 
               <div className="gradient-border p-6 rounded-2xl">
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                I don't just write backend code I build the <span className="text-purple">cloud infrastructure</span> it lives on.
-                Building <span className="text-pink">event-driven pipelines</span> with AWS Lambda and DynamoDB, and configuring EC2 environments from scratch.
-                Lately I've been diving deep into Terraform to automate deployments and design systems that basically run themselves.</p>
+                  I don't just write backend code, I build the cloud infrastructure it lives on. Building event-driven pipelines with AWS Lambda and DynamoDB, and configuring EC2 environments from scratch. Lately, I've been diving deep into Terraform to automate deployments and design systems that basically run themselves.
+                </p>
               </div>
-
               <div className="gradient-border p-6 rounded-2xl">
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                When my code is finally pushed, my favorite way to unwind? Rewatching Modern Family. Watching Phil Dunphy's chaos is the perfect therapy after a long day of debugging. Sometimes I balance it out by hitting the pavement for a long run.
+                  When my code is finally pushed, my favorite way to unwind? Rewatching Modern Family. Watching Phil Dunphy's chaos is the perfect therapy after a long day of debugging. Sometimes I balance it out by hitting the pavement for a long run.
                 </p>
               </div>
             </motion.div>
 
-            {/* Skills */}
-            <motion.div variants={itemVariants} className="space-y-8">
+            {/* Right Column: Skills */}
+            <motion.div variants={itemVariants} className="space-y-6"> {/* Changed from space-y-8 to space-y-6 */}
               {Object.entries(skills).map(([category, skillList]) => (
                 <div key={category}>
-                  <h3 className="text-sm font-mono text-cyan uppercase tracking-wider mb-3">
+                  <h3 className="text-sm font-mono text-purple uppercase tracking-wider mb-3"> {/* Changed to purple to match your screenshot */}
                     {category}
                   </h3>
                   <motion.div
@@ -103,10 +103,10 @@ const AboutSection = () => {
                         variants={skillVariants}
                         whileHover={{
                           scale: 1.05,
-                          boxShadow: "0 0 20px hsl(var(--cyan) / 0.3)",
+                          boxShadow: "0 0 20px hsl(var(--purple) / 0.3)", // Matched glow to purple
                         }}
-                        className="px-4 py-2 rounded-full text-sm bg-muted/50 border border-border hover:border-cyan transition-all duration-300 cursor-default"
-                        style={{ transitionDelay: `${index * 50}ms` }}
+                        className="px-4 py-2 rounded-full text-sm bg-muted/50 border border-border hover:border-purple transition-all duration-300 cursor-default" // Matched hover border to purple
+                        style={{ transitionDelay: `${index * 30}ms` }} // Sped up the stagger slightly so it feels snappier
                       >
                         {skill}
                       </motion.span>

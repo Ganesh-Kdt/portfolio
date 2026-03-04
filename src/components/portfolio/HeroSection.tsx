@@ -446,9 +446,9 @@ const HeroSection = () => {
               className="flex justify-center gap-4 mb-12"
             >
               {[
-                { href: "https://github.com/ganeshkudtarkar", icon: Github, hoverClass: "hover:border-cyan hover:glow-cyan" },
-                { href: "https://linkedin.com/in/ganeshkudtarkar", icon: Linkedin, hoverClass: "hover:border-purple hover:glow-purple" },
-                { href: "mailto:ganesh.kudtarkar@gmail.com", icon: Mail, hoverClass: "hover:border-pink hover:glow-pink" },
+                { href: "https://github.com/Ganesh-Kdt", icon: Github, hoverClass: "hover:border-cyan hover:glow-cyan" },
+                { href: "https://www.linkedin.com/in/ganesh-kudtarkar/", icon: Linkedin, hoverClass: "hover:border-purple hover:glow-purple" },
+                { href: "mailto:gkudtarkar8@gmail.com", icon: Mail, hoverClass: "hover:border-pink hover:glow-pink" },
               ].map((social, i) => (
                 <motion.a
                   key={social.href}

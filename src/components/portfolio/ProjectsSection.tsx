@@ -9,7 +9,7 @@ const projects = [
     description:
     "An ML-powered system that categorizes queries into specific workflow buckets (Academic, Course, Technical) using custom Word2Vec embeddings and advanced NLP preprocessing.",
     technologies: ["Python", "Flask", "Word2Vec", "Random Forest", "NLP"],
-    github: "https://github.com/ganeshkudtarkar/query-classifier",
+    github: "https://github.com/Ganesh-Kdt/Query_Classification",
     demo: null,
     featured: true,
     category: "AI/ML",
@@ -19,7 +19,7 @@ const projects = [
     description:
     "An intelligent platform that converts uploaded lecture transcripts into engaging multiple-choice quizzes by combining 4 specialized Hugging Face AI models to generate questions and realistic distractors.",
     technologies: ["React.js", "Django", "Hugging Face", "Python"],
-    github: "https://github.com/ganeshkudtarkar/quizwhiz",
+    github: "https://github.com/Ganesh-Kdt/QuizWhiz",
     demo: null,
     featured: true,
     category: "AI/ML",
@@ -29,7 +29,7 @@ const projects = [
     description:
       "A multi-client TCP chat server built from scratch, implements a custom client-server architecture with real-time messaging, broadcast capabilities, and offline message buffering.",
     technologies: ["C++", "TCP/IP Sockets", "Multi-threading", "Client-Server Architecture"],
-    github: "https://github.com/ganeshkudtarkar/text-chat",
+    github: "",
     demo: null,
     featured: true,
     category: "Networking",
@@ -188,11 +188,11 @@ const ProjectsSection = () => {
           </p>
           <Button
             variant="outline"
-            className="border-cyan/50 hover:border-cyan hover:bg-cyan/10 transition-all"
+            className="border-cyan/50 text-foreground hover:text-cyan hover:border-cyan hover:bg-cyan/10 active:bg-cyan/20 transition-all"
             asChild
           >
             <a
-              href="https://github.com/ganeshkudtarkar"
+              href="https://github.com/Ganesh-Kdt"
               target="_blank"
               rel="noopener noreferrer"
             >
