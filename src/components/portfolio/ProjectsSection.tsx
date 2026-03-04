@@ -7,8 +7,8 @@ const projects = [
   {
     title: "Query Classifier",
     description:
-      "An ML-powered system that classifies user queries into categories for intelligent routing and processing. Uses NLP techniques for accurate text classification.",
-    technologies: ["Python", "TensorFlow", "FastAPI", "PostgreSQL"],
+    "An ML-powered system that categorizes queries into specific workflow buckets (Academic, Course, Technical) using custom Word2Vec embeddings and advanced NLP preprocessing.",
+    technologies: ["Python", "Flask", "Word2Vec", "Random Forest", "NLP"],
     github: "https://github.com/ganeshkudtarkar/query-classifier",
     demo: null,
     featured: true,
@@ -17,8 +17,8 @@ const projects = [
   {
     title: "QuizWhiz",
     description:
-      "AI-powered quiz generation platform that creates personalized quizzes from any topic or uploaded content. Features adaptive difficulty and detailed analytics.",
-    technologies: ["React", "TypeScript", "OpenAI API", "Node.js", "MongoDB"],
+    "An intelligent platform that converts uploaded lecture transcripts into engaging multiple-choice quizzes by combining 4 specialized Hugging Face AI models to generate questions and realistic distractors.",
+    technologies: ["React.js", "Django", "Hugging Face", "Python"],
     github: "https://github.com/ganeshkudtarkar/quizwhiz",
     demo: null,
     featured: true,
@@ -27,8 +27,8 @@ const projects = [
   {
     title: "Text Chat Application",
     description:
-      "Real-time chat application built from scratch using C++ and socket programming. Implements a custom protocol for message handling and multi-client support.",
-    technologies: ["C++", "Socket Programming", "Multi-threading", "TCP/IP"],
+      "A multi-client TCP chat server built from scratch, implements a custom client-server architecture with real-time messaging, broadcast capabilities, and offline message buffering.",
+    technologies: ["C++", "TCP/IP Sockets", "Multi-threading", "Client-Server Architecture"],
     github: "https://github.com/ganeshkudtarkar/text-chat",
     demo: null,
     featured: true,

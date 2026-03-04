@@ -113,7 +113,7 @@ const ContactSection = () => {
                     <span>gkudtarkar8@gmail.com</span>
                   </motion.a>
                   <motion.a
-                    href="https://github.com/ganeshkudtarkar"
+                    href="https://github.com/Ganesh-Kdt"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ x: 5 }}
@@ -122,10 +122,10 @@ const ContactSection = () => {
                     <div className="p-2 rounded-lg bg-purple/10 border border-purple/30">
                       <Github className="w-5 h-5 text-purple" />
                     </div>
-                    <span>github.com/ganeshkudtarkar</span>
+                    <span>github.com/Ganesh-Kdt</span>
                   </motion.a>
                   <motion.a
-                    href="https://linkedin.com/in/ganeshkudtarkar"
+                    href="https://www.linkedin.com/in/ganesh-kudtarkar/"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ x: 5 }}
@@ -134,7 +134,7 @@ const ContactSection = () => {
                     <div className="p-2 rounded-lg bg-pink/10 border border-pink/30">
                       <Linkedin className="w-5 h-5 text-pink" />
                     </div>
-                    <span>linkedin.com/in/ganeshkudtarkar</span>
+                    <span>linkedin.com/in/ganesh-kudtarkar</span>
                   </motion.a>
                 </div>
               </div>
@@ -146,7 +146,7 @@ const ContactSection = () => {
                   <div className="p-2 rounded-lg bg-muted border border-border">
                     <MapPin className="w-5 h-5" />
                   </div>
-                  <span>Mumbai, India</span>
+                  <span>New York City, NY</span>
                 </div>
               </div>
             </motion.div>
@@ -229,7 +229,7 @@ const ContactSection = () => {
         className="mt-24 text-center text-sm text-muted-foreground"
       >
         <p>Designed & Built by Ganesh Kudtarkar</p>
-        <p className="mt-1">© {new Date().getFullYear()} All rights reserved.</p>
+        <p className="mt-1">© {new Date().getFullYear()}. Code licensed under MIT License</p>
       </motion.footer>
     </section>
   );

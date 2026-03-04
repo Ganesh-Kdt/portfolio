@@ -60,14 +60,11 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## ⚖️ License & Copyright
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+The codebase for this portfolio is open-source and licensed under the [MIT License](LICENSE). You are welcome to fork this repository, explore the code, and use the UI/components to build your own personal website.
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+**However, please note:**
+* All personal content, text, project descriptions, and resume details are the intellectual property of Ganesh Kudtarkar.
+* You **must** swap out all personal information, links, and branding with your own before publishing your version. 
+* You may not use my identity, experience, or project details to represent yourself.

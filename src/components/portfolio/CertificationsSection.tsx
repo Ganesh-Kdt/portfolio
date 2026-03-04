@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Award, ExternalLink, Calendar } from "lucide-react";
+import { ExternalLink, Calendar } from "lucide-react";
 
 const certifications = [
   {
@@ -10,14 +10,16 @@ const certifications = [
     description: "Demonstrated expertise in cloud-based AI workloads focusing on Azure AI Foundry, and integrating AI models into scalable enterprise infrastructure.",
     color: "cyan",
     icon: "☁️",
+    link: "https://learn.microsoft.com/en-us/users/ganeshdineshkudtarkar-0330/credentials/407aaa658c68c67c",
   },
   {
     name: "Machine Learning Specialization",
     issuer: "Coursera (DeepLearning.AI)",
     date: "2023",
-    description: "Comprehensive specialization covering supervised learning, unsupervised learning, and recommendation systems using Python.",
+    description: "Comprehensive specialization covering supervised learning, unsupervised learning, and recommender systems using Python.",
     color: "purple",
     icon: "📈",
+    link: "https://www.coursera.org/account/accomplishments/specialization/certificate/FZ4XNB63EHGU", 
   },
 ];
 
@@ -69,8 +71,11 @@ const CertificationsSection = () => {
           {/* Certifications grid */}
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {certifications.map((cert, index) => (
-              <motion.div
+              <motion.a
                 key={index}
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 variants={cardVariants}
                 whileHover={{
                   scale: 1.03,
@@ -81,14 +86,14 @@ const CertificationsSection = () => {
                       : "0 20px 40px hsl(var(--purple) / 0.2)",
                 }}
                 style={{ perspective: 1000 }}
-                className="gradient-border p-6 rounded-2xl group cursor-pointer"
+                className="gradient-border p-6 rounded-2xl group cursor-pointer block"
               >
                 <div className="flex items-start gap-4">
                   {/* Icon */}
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.5 }}
-                    className={`w-14 h-14 rounded-xl flex items-center justify-center text-2xl ${
+                    className={`w-14 h-14 flex-shrink-0 rounded-xl flex items-center justify-center text-2xl ${
                       cert.color === "cyan"
                         ? "bg-cyan/10 border border-cyan/30"
                         : "bg-purple/10 border border-purple/30"
@@ -99,9 +104,11 @@ const CertificationsSection = () => {
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-foreground mb-1 group-hover:text-cyan transition-colors">
-                      {cert.name}
-                    </h3>
+                  <h3 className={`text-lg font-bold text-foreground mb-1 transition-colors ${
+                    cert.color === "cyan" ? "group-hover:text-cyan" : "group-hover:text-purple"
+                  }`}>
+                    {cert.name}
+                  </h3>
                     <p
                       className={`text-sm font-medium mb-2 ${
                         cert.color === "cyan" ? "text-cyan" : "text-purple"
@@ -118,33 +125,23 @@ const CertificationsSection = () => {
                     </div>
                   </div>
 
-                  {/* Badge */}
+                  {/* External Link Badge */}
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={isInView ? { scale: 1 } : {}}
                     transition={{ delay: 0.3 + index * 0.1 }}
-                    className={`p-2 rounded-full ${
+                    className={`p-2 flex-shrink-0 rounded-full transition-colors ${
                       cert.color === "cyan"
-                        ? "bg-cyan/10 text-cyan"
-                        : "bg-purple/10 text-purple"
+                        ? "bg-cyan/10 text-cyan group-hover:bg-cyan group-hover:text-black"
+                        : "bg-purple/10 text-purple group-hover:bg-purple group-hover:text-white"
                     }`}
                   >
-                    <Award className="w-5 h-5" />
+                    <ExternalLink className="w-5 h-5" />
                   </motion.div>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
-
-          {/* Add more placeholder */}
-          {/* <motion.p
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ delay: 0.8 }}
-            className="text-center text-muted-foreground text-sm mt-8"
-          >
-          //   More certifications coming soon...
-          </motion.p> */}
         </motion.div>
       </div>
     </section>

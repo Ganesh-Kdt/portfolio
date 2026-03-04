@@ -9,7 +9,7 @@ const experiences = [
     period: "Sep 2025 - Dec 2025",
     location: "Buffalo, NY",
     description:
-      "Contributed to the core payment processing platform by building high-performance backend pipelines.",
+      "Contributed to the core payment processing platform by building high performance backend pipelines.",
     achievements: [
       "Slashed batch processing time to under 300ms for a platform-wide transaction limit reset system by engineering a concurrent 8-worker pool using Golang, DynamoDB, and AWS EventBridge",
       "Saved 5+ hours of manual testing weekly by integrating Cypress E2E regression suites into GitHub Actions",
@@ -54,7 +54,7 @@ const ExperienceCard = ({
   experience: (typeof experiences)[0];
   index: number;
 }) => {
-  const [isExpanded, setIsExpanded] = useState(index <= 2);
+  // const [isExpanded, setIsExpanded] = useState(index <= 2);
   const cardRef = useRef(null);
   const isInView = useInView(cardRef, { once: true, margin: "-50px" });
 
@@ -85,7 +85,7 @@ const ExperienceCard = ({
         <motion.div
           whileHover={{ scale: 1.02 }}
           className="gradient-border p-6 rounded-2xl cursor-pointer"
-          onClick={() => setIsExpanded(!isExpanded)}
+          // onClick={() => setIsExpanded(!isExpanded)}
         >
           {/* Header */}
           <div className="flex items-start justify-between mb-4">
@@ -96,10 +96,10 @@ const ExperienceCard = ({
               <p className="text-cyan font-medium">{experience.company}</p>
             </div>
             <motion.div
-              animate={{ rotate: isExpanded ? 180 : 0 }}
-              transition={{ duration: 0.3 }}
+              // animate={{ rotate: isExpanded ? 180 : 0 }}
+              // transition={{ duration: 0.3 }}
             >
-              <ChevronDown className="w-5 h-5 text-muted-foreground" />
+              {/* <ChevronDown className="w-5 h-5 text-muted-foreground" /> */}
             </motion.div>
           </div>
 
@@ -121,8 +121,8 @@ const ExperienceCard = ({
           <motion.div
             initial={false}
             animate={{
-              height: isExpanded ? "auto" : 0,
-              opacity: isExpanded ? 1 : 0,
+              // height: isExpanded ? "auto" : 0,
+              // opacity: isExpanded ? 1 : 0,
             }}
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
@@ -137,7 +137,7 @@ const ExperienceCard = ({
                   <motion.li
                     key={i}
                     initial={{ opacity: 0, x: -10 }}
-                    animate={isExpanded ? { opacity: 1, x: 0 } : {}}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: i * 0.1 }}
                     className="flex items-start gap-2 text-sm text-muted-foreground"
                   >
@@ -149,7 +149,7 @@ const ExperienceCard = ({
             </div>
 
             {/* Technologies */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-white/5">
               {experience.technologies.map((tech) => (
                 <span
                   key={tech}
